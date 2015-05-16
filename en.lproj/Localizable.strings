@@ -16,3 +16,16 @@
 "TITLE_REGISTER_HELP" ="Terms & Conditions";
 //Alert dialog
 "TITLE_DIALOG_WARNING"="Warning";
+
+
+//Thanhnd start
+"Internal tranfer" = "Internal tranfer";
+"Inter-bank tranfer" = "Inter-bank tranfer";
+"Open saving account" = "Open saving account";
+"Settlement" = "Settlement";
+
+
+"Transfers" = "Transfers";
+"Batchs" = "Batchs";
+"Others" = "Others";
+//Thanhnd end

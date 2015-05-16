@@ -11,7 +11,7 @@
 @implementation Constant
 
 
-NSString* const URL_SERVER = @"";
+NSString* const URL_SERVER = @"http://118.70.157.239:9080/IBSServerApp/";
 NSString* const PING_SERVER= @"";
 
 @end

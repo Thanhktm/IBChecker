@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055BB4171B01D28400F66C65 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055BB4161B01D28400F66C65 /* CoreData.framework */; };
+		055BB41A1B01D3D800F66C65 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 055BB4181B01D3D800F66C65 /* CoreData.xcdatamodeld */; };
+		055BB41D1B01D61200F66C65 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 055BB41C1B01D61200F66C65 /* User.m */; };
+		055BB4201B01E56900F66C65 /* PendingTransactionsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 055BB41F1B01E56900F66C65 /* PendingTransactionsService.m */; };
+		05D7A92A1B0618AC00388443 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D7A9291B0618AC00388443 /* Account.m */; };
+		05D8F8B11B00A8CE00F70FC7 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8F8B01B00A8CE00F70FC7 /* Item.m */; };
+		05D8F8B61B00AB2000F70FC7 /* NSDictionary+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8F8B51B00AB2000F70FC7 /* NSDictionary+Extra.m */; };
+		05D8F8B91B00AC6600F70FC7 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8F8B81B00AC6600F70FC7 /* Transaction.m */; };
+		05D8F8BD1B00ACFB00F70FC7 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8F8BC1B00ACFB00F70FC7 /* BaseService.m */; };
+		05D8F8C01B00BA9800F70FC7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8F8BF1B00BA9800F70FC7 /* BaseViewController.m */; };
+		05D8F8C31B00BABE00F70FC7 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8F8C21B00BABE00F70FC7 /* BaseTableViewController.m */; };
+		05D8F8C81B00BC4500F70FC7 /* TransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8F8C61B00BC4500F70FC7 /* TransactionsViewController.m */; };
+		05D8F8C91B00BC4500F70FC7 /* TransactionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D8F8C71B00BC4500F70FC7 /* TransactionsViewController.xib */; };
+		05E384781B06B342006FF578 /* bg_span.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E384771B06B342006FF578 /* bg_span.png */; };
+		05E3847A1B06B633006FF578 /* bg_section.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E384791B06B633006FF578 /* bg_section.png */; };
+		05E3847E1B06C0AF006FF578 /* uncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E3847C1B06C0AF006FF578 /* uncheck.png */; };
+		05E3847F1B06C0AF006FF578 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E3847D1B06C0AF006FF578 /* check.png */; };
+		05E384831B06C5B8006FF578 /* separate.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E384821B06C5B8006FF578 /* separate.png */; };
+		05E384861B06CB3D006FF578 /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E384851B06CB3D006FF578 /* TransactionTableViewCell.m */; };
+		05E384891B06D1D1006FF578 /* TransactionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E384881B06D1D1006FF578 /* TransactionHeaderView.m */; };
+		05E3848C1B06ECE2006FF578 /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E3848A1B06ECE2006FF578 /* arrow_down.png */; };
+		05E3848D1B06ECE2006FF578 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E3848B1B06ECE2006FF578 /* arrow_right.png */; };
+		05EEBE451B0197970081BE80 /* AuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EEBE441B0197970081BE80 /* AuthService.m */; };
 		430122A51AFCB72900180716 /* LeftMenuHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 430122A31AFCB72900180716 /* LeftMenuHome.m */; };
 		430122A61AFCB72900180716 /* LeftMenuHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430122A41AFCB72900180716 /* LeftMenuHome.xib */; };
 		430122A81AFCBE4700180716 /* bg_leftmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 430122A71AFCBE4700180716 /* bg_leftmenu.png */; };
@@ -101,6 +124,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		055BB4161B01D28400F66C65 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		055BB4191B01D3D800F66C65 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		055BB41B1B01D61200F66C65 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		055BB41C1B01D61200F66C65 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		055BB41E1B01E56900F66C65 /* PendingTransactionsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingTransactionsService.h; sourceTree = "<group>"; };
+		055BB41F1B01E56900F66C65 /* PendingTransactionsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingTransactionsService.m; sourceTree = "<group>"; };
+		05D7A9281B0618AC00388443 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		05D7A9291B0618AC00388443 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		05D8F8AF1B00A8CE00F70FC7 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		05D8F8B01B00A8CE00F70FC7 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		05D8F8B41B00AB2000F70FC7 /* NSDictionary+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extra.h"; sourceTree = "<group>"; };
+		05D8F8B51B00AB2000F70FC7 /* NSDictionary+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extra.m"; sourceTree = "<group>"; };
+		05D8F8B71B00AC6600F70FC7 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		05D8F8B81B00AC6600F70FC7 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		05D8F8BB1B00ACFB00F70FC7 /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		05D8F8BC1B00ACFB00F70FC7 /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
+		05D8F8BE1B00BA9800F70FC7 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		05D8F8BF1B00BA9800F70FC7 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		05D8F8C11B00BABE00F70FC7 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		05D8F8C21B00BABE00F70FC7 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		05D8F8C51B00BC4500F70FC7 /* TransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsViewController.h; sourceTree = "<group>"; };
+		05D8F8C61B00BC4500F70FC7 /* TransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsViewController.m; sourceTree = "<group>"; };
+		05D8F8C71B00BC4500F70FC7 /* TransactionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionsViewController.xib; sourceTree = "<group>"; };
+		05E384771B06B342006FF578 /* bg_span.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_span.png; sourceTree = "<group>"; };
+		05E384791B06B633006FF578 /* bg_section.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_section.png; sourceTree = "<group>"; };
+		05E3847C1B06C0AF006FF578 /* uncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uncheck.png; sourceTree = "<group>"; };
+		05E3847D1B06C0AF006FF578 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		05E384821B06C5B8006FF578 /* separate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = separate.png; path = Resources/Background/separate.png; sourceTree = "<group>"; };
+		05E384841B06CB3D006FF578 /* TransactionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTableViewCell.h; sourceTree = "<group>"; };
+		05E384851B06CB3D006FF578 /* TransactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTableViewCell.m; sourceTree = "<group>"; };
+		05E384871B06D1D1006FF578 /* TransactionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionHeaderView.h; sourceTree = "<group>"; };
+		05E384881B06D1D1006FF578 /* TransactionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionHeaderView.m; sourceTree = "<group>"; };
+		05E3848A1B06ECE2006FF578 /* arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_down.png; sourceTree = "<group>"; };
+		05E3848B1B06ECE2006FF578 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
+		05EEBE431B0197970081BE80 /* AuthService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthService.h; sourceTree = "<group>"; };
+		05EEBE441B0197970081BE80 /* AuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthService.m; sourceTree = "<group>"; };
 		430122A21AFCB72900180716 /* LeftMenuHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuHome.h; path = MenuHome/LeftMenuHome.h; sourceTree = "<group>"; };
 		430122A31AFCB72900180716 /* LeftMenuHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuHome.m; path = MenuHome/LeftMenuHome.m; sourceTree = "<group>"; };
 		430122A41AFCB72900180716 /* LeftMenuHome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeftMenuHome.xib; path = MenuHome/LeftMenuHome.xib; sourceTree = "<group>"; };
@@ -237,6 +296,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055BB4171B01D28400F66C65 /* CoreData.framework in Frameworks */,
 				430BA5331AF8D51F00CA7CFB /* CoreGraphics.framework in Frameworks */,
 				430BA5311AF8CF1E00CA7CFB /* QuartzCore.framework in Frameworks */,
 				430BA52F1AF8CE9500CA7CFB /* MapKit.framework in Frameworks */,
@@ -259,6 +319,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05D8F8AE1B00A8A500F70FC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05D8F8AF1B00A8CE00F70FC7 /* Item.h */,
+				05D8F8B01B00A8CE00F70FC7 /* Item.m */,
+				05D8F8B71B00AC6600F70FC7 /* Transaction.h */,
+				05D8F8B81B00AC6600F70FC7 /* Transaction.m */,
+				055BB41B1B01D61200F66C65 /* User.h */,
+				055BB41C1B01D61200F66C65 /* User.m */,
+				05D7A9281B0618AC00388443 /* Account.h */,
+				05D7A9291B0618AC00388443 /* Account.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		05D8F8B31B00AB1500F70FC7 /* NSDictionary+Extra */ = {
+			isa = PBXGroup;
+			children = (
+				05D8F8B41B00AB2000F70FC7 /* NSDictionary+Extra.h */,
+				05D8F8B51B00AB2000F70FC7 /* NSDictionary+Extra.m */,
+			);
+			name = "NSDictionary+Extra";
+			path = "Library/NSDictionary+Extra";
+			sourceTree = "<group>";
+		};
+		05D8F8BA1B00ACE400F70FC7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				05D8F8BB1B00ACFB00F70FC7 /* BaseService.h */,
+				05D8F8BC1B00ACFB00F70FC7 /* BaseService.m */,
+				05EEBE431B0197970081BE80 /* AuthService.h */,
+				05EEBE441B0197970081BE80 /* AuthService.m */,
+				055BB41E1B01E56900F66C65 /* PendingTransactionsService.h */,
+				055BB41F1B01E56900F66C65 /* PendingTransactionsService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		05D8F8C41B00BBEE00F70FC7 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				05D8F8C51B00BC4500F70FC7 /* TransactionsViewController.h */,
+				05D8F8C61B00BC4500F70FC7 /* TransactionsViewController.m */,
+				05D8F8C71B00BC4500F70FC7 /* TransactionsViewController.xib */,
+				05E384841B06CB3D006FF578 /* TransactionTableViewCell.h */,
+				05E384851B06CB3D006FF578 /* TransactionTableViewCell.m */,
+				05E384871B06D1D1006FF578 /* TransactionHeaderView.h */,
+				05E384881B06D1D1006FF578 /* TransactionHeaderView.m */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		05E3847B1B06C0A0006FF578 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				05E3848A1B06ECE2006FF578 /* arrow_down.png */,
+				05E3848B1B06ECE2006FF578 /* arrow_right.png */,
+				05E3847C1B06C0AF006FF578 /* uncheck.png */,
+				05E3847D1B06C0AF006FF578 /* check.png */,
+			);
+			name = Transaction;
+			path = Resources/Transaction;
+			sourceTree = "<group>";
+		};
 		430122A91AFCBFFD00180716 /* LeftMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +395,7 @@
 		430BA51E1AF8B79300CA7CFB /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				055BB4161B01D28400F66C65 /* CoreData.framework */,
 				430BA5321AF8D51F00CA7CFB /* CoreGraphics.framework */,
 				430BA5301AF8CF1E00CA7CFB /* QuartzCore.framework */,
 				430BA52E1AF8CE9500CA7CFB /* MapKit.framework */,
@@ -348,6 +473,9 @@
 		431E8DFB1AE9F85700EA644C = {
 			isa = PBXGroup;
 			children = (
+				05D8F8C41B00BBEE00F70FC7 /* Transaction */,
+				05D8F8BA1B00ACE400F70FC7 /* Service */,
+				05D8F8AE1B00A8A500F70FC7 /* Model */,
 				430BA5391AF9F17A00CA7CFB /* MenuHome */,
 				4312A0941AF8625900059EE9 /* Database */,
 				431E8EB81AE9FDD800EA644C /* Default-568h@2x.png */,
@@ -380,6 +508,11 @@
 				431E8E0C1AE9F85700EA644C /* AppDelegate.m */,
 				431E8E141AE9F85800EA644C /* Images.xcassets */,
 				431E8E071AE9F85700EA644C /* Supporting Files */,
+				05D8F8BE1B00BA9800F70FC7 /* BaseViewController.h */,
+				05D8F8BF1B00BA9800F70FC7 /* BaseViewController.m */,
+				05D8F8C11B00BABE00F70FC7 /* BaseTableViewController.h */,
+				05D8F8C21B00BABE00F70FC7 /* BaseTableViewController.m */,
+				055BB4181B01D3D800F66C65 /* CoreData.xcdatamodeld */,
 			);
 			path = "IB Checker";
 			sourceTree = "<group>";
@@ -431,10 +564,11 @@
 		431E8E2E1AE9F9C600EA644C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				05E3847B1B06C0A0006FF578 /* Transaction */,
 				430122A91AFCBFFD00180716 /* LeftMenu */,
 				431E8E351AE9FA7000EA644C /* Regsiter */,
 				431E8E341AE9FA5A00EA644C /* HTML */,
-				431E8E331AE9FA4E00EA644C /* Background */,
+				431E8E331AE9FA4E00EA644C /* Backgound */,
 				431E8E321AE9FA4000EA644C /* Login */,
 			);
 			name = Resources;
@@ -469,6 +603,7 @@
 		431E8E311AE9FA3500EA644C /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				05D8F8B31B00AB1500F70FC7 /* NSDictionary+Extra */,
 				430BA5351AF8D8AF00CA7CFB /* MBProgressHUD */,
 				4312A0961AF864B600059EE9 /* FMDB */,
 				431E8E731AE9FCE600EA644C /* AFNetworking */,
@@ -491,14 +626,17 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
-		431E8E331AE9FA4E00EA644C /* Background */ = {
+		431E8E331AE9FA4E00EA644C /* Backgound */ = {
 			isa = PBXGroup;
 			children = (
+				05E384821B06C5B8006FF578 /* separate.png */,
+				05E384791B06B633006FF578 /* bg_section.png */,
+				05E384771B06B342006FF578 /* bg_span.png */,
 				430122A71AFCBE4700180716 /* bg_leftmenu.png */,
 				431E8E4E1AE9FBBC00EA644C /* bg_wating.png */,
 				431E8E4F1AE9FBBC00EA644C /* im_navigatorbar.png */,
 			);
-			name = Background;
+			name = Backgound;
 			sourceTree = "<group>";
 		};
 		431E8E341AE9FA5A00EA644C /* HTML */ = {
@@ -671,11 +809,14 @@
 			files = (
 				430122A61AFCB72900180716 /* LeftMenuHome.xib in Resources */,
 				430122B51AFCC99000180716 /* LeftMenuCell.xib in Resources */,
+				05E3847E1B06C0AF006FF578 /* uncheck.png in Resources */,
+				05E3847A1B06B633006FF578 /* bg_section.png in Resources */,
 				430BA5251AF8BC2E00CA7CFB /* IBChecker.sqlite in Resources */,
 				431E8E4C1AE9FBB500EA644C /* AuthenHelp.html in Resources */,
 				431E8EB91AE9FDD800EA644C /* Default-568h@2x.png in Resources */,
 				431E8EBC1AE9FFE800EA644C /* Localizable.strings in Resources */,
 				431E8EC31AEA03B000EA644C /* im_la_en.png in Resources */,
+				05D8F8C91B00BC4500F70FC7 /* TransactionsViewController.xib in Resources */,
 				430122A81AFCBE4700180716 /* bg_leftmenu.png in Resources */,
 				431E8E431AE9FBA100EA644C /* txt_login.png in Resources */,
 				431E8E721AE9FC3200EA644C /* RegisterViewController.xib in Resources */,
@@ -684,17 +825,22 @@
 				431E8EC41AEA03B000EA644C /* im_la_vn.png in Resources */,
 				431E8E4D1AE9FBB500EA644C /* RegisterHelp.html in Resources */,
 				431E8E5E1AE9FC1C00EA644C /* LoginController.xib in Resources */,
+				05E3847F1B06C0AF006FF578 /* check.png in Resources */,
 				431E8E401AE9FBA100EA644C /* btn_dangnhap.png in Resources */,
+				05E384781B06B342006FF578 /* bg_span.png in Resources */,
 				431E8E3E1AE9FBA100EA644C /* bn_duongke.png in Resources */,
 				431E8E491AE9FBAC00EA644C /* bg_textlogin.png in Resources */,
 				431E8E5C1AE9FC1C00EA644C /* LoginAuthController.xib in Resources */,
 				430122AB1AFCC01800180716 /* ic_avata_leftmenu.png in Resources */,
 				431E8E601AE9FC1C00EA644C /* WatingController.xib in Resources */,
+				05E3848D1B06ECE2006FF578 /* arrow_right.png in Resources */,
 				431E8E701AE9FC3200EA644C /* HelpViewController.xib in Resources */,
 				430122AD1AFCC3F500180716 /* ic_menu_lock.png in Resources */,
 				431E8E3F1AE9FBA100EA644C /* btn_cancel.png in Resources */,
 				431E8E481AE9FBAC00EA644C /* bg_password.png in Resources */,
 				431E8E421AE9FBA100EA644C /* im_uncheck.png in Resources */,
+				05E3848C1B06ECE2006FF578 /* arrow_down.png in Resources */,
+				05E384831B06C5B8006FF578 /* separate.png in Resources */,
 				431E8E501AE9FBBC00EA644C /* bg_wating.png in Resources */,
 				431E8E511AE9FBBC00EA644C /* im_navigatorbar.png in Resources */,
 				431E8E471AE9FBAC00EA644C /* bg_btnlogin.png in Resources */,
@@ -717,33 +863,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055BB41D1B01D61200F66C65 /* User.m in Sources */,
 				431E8E9F1AE9FCE600EA644C /* AFSecurityPolicy.m in Sources */,
+				05D8F8C01B00BA9800F70FC7 /* BaseViewController.m in Sources */,
 				431E8E5F1AE9FC1C00EA644C /* WatingController.m in Sources */,
 				431E8E9E1AE9FCE600EA644C /* AFNetworkReachabilityManager.m in Sources */,
 				431E8EB61AE9FD0F00EA644C /* Utils.m in Sources */,
 				4312A0A91AF8669200059EE9 /* DataBaseHelper.m in Sources */,
 				431E8E6C1AE9FC3200EA644C /* AuthenViewController.m in Sources */,
 				431E8EAA1AE9FCE600EA644C /* UIProgressView+AFNetworking.m in Sources */,
+				05D8F8C81B00BC4500F70FC7 /* TransactionsViewController.m in Sources */,
+				05E384861B06CB3D006FF578 /* TransactionTableViewCell.m in Sources */,
 				430BA5381AF8D8C500CA7CFB /* MBProgressHUD.m in Sources */,
 				431E8EA71AE9FCE600EA644C /* UIAlertView+AFNetworking.m in Sources */,
 				431E8EA51AE9FCE600EA644C /* AFNetworkActivityIndicatorManager.m in Sources */,
 				431E8EA01AE9FCE600EA644C /* AFURLConnectionOperation.m in Sources */,
+				05D8F8B61B00AB2000F70FC7 /* NSDictionary+Extra.m in Sources */,
 				4312A0A61AF864B600059EE9 /* FMResultSet.m in Sources */,
+				05D8F8B91B00AC6600F70FC7 /* Transaction.m in Sources */,
 				431E8EA81AE9FCE600EA644C /* UIButton+AFNetworking.m in Sources */,
+				05D8F8B11B00A8CE00F70FC7 /* Item.m in Sources */,
 				431E8EA61AE9FCE600EA644C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				431E8E9B1AE9FCE600EA644C /* AFHTTPRequestOperation.m in Sources */,
 				431E8EB51AE9FD0F00EA644C /* Constant.m in Sources */,
 				430122B41AFCC99000180716 /* LeftMenuCell.m in Sources */,
 				431E8EAC1AE9FCE600EA644C /* UIWebView+AFNetworking.m in Sources */,
 				431E8E9D1AE9FCE600EA644C /* AFHTTPSessionManager.m in Sources */,
+				05D7A92A1B0618AC00388443 /* Account.m in Sources */,
 				431E8EAF1AE9FCF600EA644C /* Language.m in Sources */,
+				05E384891B06D1D1006FF578 /* TransactionHeaderView.m in Sources */,
 				4312A0A41AF864B600059EE9 /* FMDatabasePool.m in Sources */,
+				05D8F8BD1B00ACFB00F70FC7 /* BaseService.m in Sources */,
+				05EEBE451B0197970081BE80 /* AuthService.m in Sources */,
 				431E8EA11AE9FCE600EA644C /* AFURLRequestSerialization.m in Sources */,
 				431E8E0D1AE9F85700EA644C /* AppDelegate.m in Sources */,
 				431E8EA31AE9FCE600EA644C /* AFURLSessionManager.m in Sources */,
 				431E8EA41AE9FCE600EA644C /* Reachability.m in Sources */,
 				4312A0A21AF864B600059EE9 /* FMDatabase.m in Sources */,
 				431E8E6E1AE9FC3200EA644C /* CustomNavigator.m in Sources */,
+				055BB41A1B01D3D800F66C65 /* CoreData.xcdatamodeld in Sources */,
+				055BB4201B01E56900F66C65 /* PendingTransactionsService.m in Sources */,
 				4312A0AD1AF8702500059EE9 /* LoginConfig.m in Sources */,
 				431E8E9C1AE9FCE600EA644C /* AFHTTPRequestOperationManager.m in Sources */,
 				4312A0A31AF864B600059EE9 /* FMDatabaseAdditions.m in Sources */,
@@ -752,6 +911,7 @@
 				431E8EAB1AE9FCE600EA644C /* UIRefreshControl+AFNetworking.m in Sources */,
 				431E8EA91AE9FCE600EA644C /* UIImageView+AFNetworking.m in Sources */,
 				430122A51AFCB72900180716 /* LeftMenuHome.m in Sources */,
+				05D8F8C31B00BABE00F70FC7 /* BaseTableViewController.m in Sources */,
 				431E8E5D1AE9FC1C00EA644C /* LoginController.m in Sources */,
 				431E8E5B1AE9FC1C00EA644C /* LoginAuthController.m in Sources */,
 				4312A0A51AF864B600059EE9 /* FMDatabaseQueue.m in Sources */,
@@ -954,6 +1114,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		055BB4181B01D3D800F66C65 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				055BB4191B01D3D800F66C65 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 055BB4191B01D3D800F66C65 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 431E8DFC1AE9F85700EA644C /* Project object */;
 }

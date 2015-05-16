@@ -16,3 +16,16 @@
 "TITLE_REGISTER_HELP" ="Điều kiện & điều khoản";
 //Alert dialog
 "TITLE_DIALOG_WARNING"="Cảnh báo";
+
+
+
+//Thanhnd start
+"Internal tranfer" = "CK trong hệ thống";
+"Inter-bank tranfer" = "CK liên ngân hàng";
+"Open saving account" = "Mở sổ tiết kiệm";
+"Settlement" = "Tất toán sổ";
+
+"Transfers" = "Chuyển khoản";
+"Batchs" = "Thanh toán lương/lô";
+"Others" = "Giao dịch khác";
+//Thanhnd end
