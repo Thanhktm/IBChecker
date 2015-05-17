@@ -23,5 +23,5 @@
 
 @property (nonatomic, strong) id<TransactionHeaderDelegate> delegate;
 
-- (void) loadHeaderWithData:(Account *)account;
+- (void)cellWithData:(Account *) account;
 @end

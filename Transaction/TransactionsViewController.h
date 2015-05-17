@@ -7,7 +7,11 @@
 //
 
 #import "BaseViewController.h"
+#import "TransactionHeaderView.h"
+#import "TransactionTableViewCell.h"
 
-@interface TransactionsViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource>
+@interface TransactionsViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource,
+TransactionCellDelegate, TransactionHeaderDelegate, UISearchResultsUpdating, UISearchBarDelegate>
 
+@property (nonatomic, strong) UISearchController *searchController;
 @end

@@ -14,12 +14,14 @@
 
 @property (nonatomic) NSInteger itemId;
 @property (nonatomic, retain) NSString *itemName;
++ (NSString *)formatNumber:(double) number;
++ (NSString *)formatPercent:(double)number;
 
 - (BOOL)loadFromItem:(Item *)item context:(NSManagedObjectContext *)context;
 
 + (NSArray *)arrayFromArrayDictionary:(NSArray *)array context:(NSManagedObjectContext *)context;
 
-+ (NSArray *)mixArray:(NSArray *)array items:(NSArray *)items context:(NSManagedObjectContext *)context;
++ (NSMutableArray *)mixArray:(NSArray *)array items:(NSArray *)items context:(NSManagedObjectContext *)context;
 
 + (id)objectFromDictionary:(NSDictionary *)dictionary context:(NSManagedObjectContext *)context;
 

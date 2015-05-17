@@ -33,17 +33,25 @@
     return arr;
 }
 
-+ (NSArray *)mixArray:(NSArray *)array items:(NSArray *)oldItems context:(NSManagedObjectContext *)context
++ (NSMutableArray *)mixArray:(NSArray *)array items:(NSArray *)oldItems context:(NSManagedObjectContext *)context
 {
-    if (array == nil || oldItems == nil) {
+    if (array == nil) {
         return nil;
     }
     
+    if (oldItems == nil) {
+        return [[NSMutableArray alloc] initWithArray:array];
+    }
+    
     NSMutableArray *arr = [[NSMutableArray alloc] init];
+    NSMutableArray *arrOld = [[NSMutableArray alloc] initWithArray:oldItems];
     for (Account *a in array) {
         bool found = NO;
-        for (Account *oldAccount in oldItems) {
+        for (Account *oldAccount in arrOld) {
             if ([oldAccount loadFromItem:a context:context]) {
+                if ([oldAccount.currencyCode isEqualToString:@"000"]) {
+                    [arrOld removeObject:oldAccount];
+                }
                 found = YES;
                 break;
             }
@@ -52,7 +60,7 @@
             [arr addObject:a];
         }
     }
-    [arr addObjectsFromArray:oldItems];
+    [arr addObjectsFromArray:arrOld];
     return arr;
     
 }
@@ -79,6 +87,12 @@
         } else {
             _others = accountNew.others;
         }
+        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:_transfers];
+        [array addObjectsFromArray:_batchs];
+        [array addObjectsFromArray:_others];
+        for (Transaction *t in array) {
+            t.currencyCode = _currencyCode;
+        }
         return YES;
     }
     return NO;
@@ -100,6 +114,14 @@
     account.transfers = [[NSMutableArray alloc] initWithArray:[Transaction arrayFromArrayDictionary:[dictionary arrayForKey:@"transfers"] context:context]];
     account.batchs = [[NSMutableArray alloc] initWithArray:[Transaction arrayFromArrayDictionary:[dictionary arrayForKey:@"batchs"] context:context]];
     account.others = [[NSMutableArray alloc] initWithArray:[Transaction arrayFromArrayDictionary:[dictionary arrayForKey:@"others"] context:context]];
+    
+    NSMutableArray *array = [[NSMutableArray alloc] initWithArray:account.transfers];
+    [array addObjectsFromArray:account.batchs];
+    [array addObjectsFromArray:account.others];
+    for (Transaction *t in array) {
+        t.currencyCode = account.currencyCode;
+    }
+    
     return account;
 }
 @end

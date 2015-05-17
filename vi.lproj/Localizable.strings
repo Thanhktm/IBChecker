@@ -22,10 +22,24 @@
 //Thanhnd start
 "Internal tranfer" = "CK trong hệ thống";
 "Inter-bank tranfer" = "CK liên ngân hàng";
-"Open saving account" = "Mở sổ tiết kiệm";
+"Open saving account" = "Tiết kiệm trực tuyến";
 "Settlement" = "Tất toán sổ";
 
 "Transfers" = "Chuyển khoản";
 "Batchs" = "Thanh toán lương/lô";
 "Others" = "Giao dịch khác";
+
+"Items" = "món";
+"Created date" = "Ngày tạo lệnh";
+"Created by" = "Người tạo lệnh";
+"Benefits" = "Danh sách người thụ hưởng";
+"Target account" = "TK đích";
+
+"Term" = "Kỳ hạn";
+"Interest rate" = "Lãi suất";
+"Interest amount" = "Số tiền lãi";
+
+"Saving acocunt" = "TK nhận lãi";
+"Accumulated principal" = "Cộng dồn vào gốc";
+
 //Thanhnd end

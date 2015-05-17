@@ -8,6 +8,7 @@
 
 #import "PendingTransactionsService.h"
 #import "Account.h"
+#import "Transaction.h"
 
 @implementation PendingTransactionsService
 
@@ -24,6 +25,33 @@
     } else {
         // Mix data
         _accounts = [Account mixArray:[Account arrayFromArrayDictionary:[data arrayForKey:@"content"] context:context] items:_accounts context:context];
+    }
+    for (Account *a in _accounts) {
+        if ([@"000" isEqualToString:a.currencyCode]) {
+            [_accounts removeObject:a];
+        } else {
+            if (a.transfers) {
+                for (Transaction *t in a.transfers) {
+                    if (t.amount == 0) {
+                        [a.transfers removeObject:t];
+                    }
+                }
+            }
+            if (a.batchs) {
+                for (Transaction *t in a.batchs) {
+                    if (t.amount == 0) {
+                        [a.batchs removeObject:t];
+                    }
+                }
+            }
+            if (a.others) {
+                for (Transaction *t in a.others) {
+                    if (t.amount == 0) {
+                        [a.others removeObject:t];
+                    }
+                }
+            }
+        }
     }
     return YES;
 }

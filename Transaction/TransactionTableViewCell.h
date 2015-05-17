@@ -14,6 +14,9 @@
 
 - (void)requestDetail:(TransactionTableViewCell *)cell transaction:(Transaction *)transaction;
 
+- (void) didChangeCheckingValue;
+
+- (void) didChangeExpand;
 @end
 @interface TransactionTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *lbTitle;
@@ -23,6 +26,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbAmount;
 @property (strong, nonatomic) IBOutlet UILabel *lbCurrency;
 @property (strong, nonatomic) IBOutlet UIButton *btnExpand;
+@property (strong, nonatomic) IBOutlet UIView *viewInfo;
+@property (strong, nonatomic) IBOutlet UIView *viewTitle;
+@property (strong, nonatomic) IBOutlet UIView *viewDetail;
 
 
 @property (strong, nonatomic) Transaction * transaction;

@@ -19,9 +19,20 @@ typedef enum {
 @property (nonatomic, strong) NSString * tranSn;
 @property (nonatomic, retain) NSString * info1;
 @property (nonatomic, retain) NSString * info2;
+@property (nonatomic, retain) NSString * currencyCode;
 @property (nonatomic) double amount;
+@property (nonatomic, retain) NSArray * benefits;
+@property (nonatomic, retain) NSString * createBy;
+@property (nonatomic, retain) NSString * createTime;
+@property (nonatomic, retain) NSString * interestAccount;
+@property (nonatomic) double  interestAmount;
+@property (nonatomic) double interestRate;
+@property (nonatomic, retain) NSString * term;
+@property (nonatomic) int type;
+
+// Additional properties for UI
 @property (nonatomic) BOOL checked;
 @property (nonatomic) BOOL expand;
 @property (nonatomic) BOOL isDetail;
-@property (nonatomic) int type;
+@property (nonatomic) BOOL isShowTitle;
 @end

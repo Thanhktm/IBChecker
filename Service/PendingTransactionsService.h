@@ -8,6 +8,6 @@
 
 #import "BaseService.h"
 @interface PendingTransactionsService : BaseService
-@property (nonatomic, strong) NSArray * accounts;
+@property (nonatomic, strong) NSMutableArray * accounts;
 - (void)getTransactionsPage:(int)page;
 @end

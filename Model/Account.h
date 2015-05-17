@@ -12,9 +12,9 @@
 @property (nonatomic, retain) NSString * sourceAccout;
 @property (nonatomic) double availbleBalance;
 @property (nonatomic, retain) NSString * currencyCode;
-@property (nonatomic, retain) NSArray * transfers;
-@property (nonatomic, retain) NSArray * batchs;
-@property (nonatomic, retain) NSArray * others;
+@property (nonatomic, retain) NSMutableArray * transfers;
+@property (nonatomic, retain) NSMutableArray * batchs;
+@property (nonatomic, retain) NSMutableArray * others;
 @property (nonatomic) BOOL checked;
 
 @end
