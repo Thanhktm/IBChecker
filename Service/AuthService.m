@@ -8,11 +8,12 @@
 
 #import "AuthService.h"
 #import "User.h"
+#import "NSString+MD5.h"
 
 @implementation AuthService
 
 - (void)login:(NSString *)username password:(NSString *)password {
-    NSDictionary *params = @{@"userName":username, @"passWord": password};
+    NSDictionary *params = @{@"userName":username, @"passWord": [password MD5Hash]};
     [self post:@"login" params:params];
 }
 

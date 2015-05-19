@@ -52,8 +52,7 @@
         _transactionApproveService = [[TransactionApprove alloc] initWithDelegate:self authtoken:_user.authtoken];
         
     } else {
-        _authService = [[AuthService alloc] initWithDelegate:self authtoken:nil];
-        [_authService login:@"sn_checker" password:@"96e79218965eb72c92a549dd5a330112"];
+        [self.navigationController popViewControllerAnimated:YES];
     }
     
     _refreshControl = [[UIRefreshControl alloc] init];
@@ -67,6 +66,17 @@
     [self.view addGestureRecognizer:recognizer];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationItem setHidesBackButton:YES];
+     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[[UIView alloc] init]];
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationItem setHidesBackButton:NO];
+}
+
+
 // Dissmiss the keyboard on tableView touches by making
 // the view the first responder
 - (void)didTouchView {
@@ -75,6 +85,10 @@
 
 - (IBAction)btnAprroveClicked:(id)sender {
     [self didTouchView];
+    if ([_txtApproveCode.text length] == 0) {
+        [[[UIAlertView alloc] initWithTitle:@"Cảnh báo" message:@"Bạn chưa nhập mã xác nhận" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        return;
+    }
     NSMutableString *strBuilder = [[NSMutableString alloc] init];
     for (Account *a in _transactionService.accounts) {
         if (a.available < 0) {
@@ -88,6 +102,10 @@
             if(t.checked) [strBuilder appendFormat:@"%@|",t.tranSn];
         }
         
+    }
+    if ([strBuilder length] == 0) {
+        [[[UIAlertView alloc] initWithTitle:@"Cảnh báo" message:@"Bạn phải chọn ít nhất 1 giao dịch" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        return;
     }
     [strBuilder deleteCharactersInRange:NSMakeRange([strBuilder length] - 1, 1)];
     [_transactionApproveService approveCode:_txtApproveCode.text transactions:strBuilder];
@@ -178,11 +196,16 @@
         [_tableView reloadData];
     }
     
-    if (service == _transactionApproveService && [_transactionApproveService parser:data context:nil]) {
-        TransactionResultViewController *resultViewController = [[TransactionResultViewController alloc] init];
-        resultViewController.listFaild = _transactionApproveService.listFaild;
-        resultViewController.listSucc = _transactionApproveService.listSucc;
-        [self.navigationController pushViewController:resultViewController animated:YES];
+    if (service == _transactionApproveService) {
+        if([_transactionApproveService parser:data context:nil]) {
+            TransactionResultViewController *resultViewController = [[TransactionResultViewController alloc] init];
+            resultViewController.listFaild = _transactionApproveService.listFaild;
+            resultViewController.listSucc = _transactionApproveService.listSucc;
+            [self.navigationController pushViewController:resultViewController animated:YES];
+        } else {
+            [[[UIAlertView alloc] initWithTitle:@"Cảnh báo" message:@"Mã xác nhận không đúng" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        }
+        
     }
     [super successRequest:service response:data];
 }

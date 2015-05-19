@@ -47,6 +47,10 @@
 		05F834BA1B0ACC7500594A73 /* TransactionResultHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05F834B81B0ACC7500594A73 /* TransactionResultHeaderView.xib */; };
 		05F834BD1B0AD19F00594A73 /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F834BB1B0AD19F00594A73 /* fail.png */; };
 		05F834BE1B0AD19F00594A73 /* pass.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F834BC1B0AD19F00594A73 /* pass.png */; };
+		05F834C31B0B2F8B00594A73 /* login_btn_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F834C21B0B2F8B00594A73 /* login_btn_press.png */; };
+		05F834C61B0B311F00594A73 /* BCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F834C51B0B311F00594A73 /* BCTextField.m */; };
+		05F834CA1B0B346900594A73 /* LoginViewControlelr.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F834C81B0B346900594A73 /* LoginViewControlelr.m */; };
+		05F834CB1B0B346900594A73 /* LoginViewControlelr.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05F834C91B0B346900594A73 /* LoginViewControlelr.xib */; };
 		430122A51AFCB72900180716 /* LeftMenuHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 430122A31AFCB72900180716 /* LeftMenuHome.m */; };
 		430122A61AFCB72900180716 /* LeftMenuHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430122A41AFCB72900180716 /* LeftMenuHome.xib */; };
 		430122A81AFCBE4700180716 /* bg_leftmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 430122A71AFCBE4700180716 /* bg_leftmenu.png */; };
@@ -94,8 +98,6 @@
 		431E8E5C1AE9FC1C00EA644C /* LoginAuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431E8E541AE9FC1C00EA644C /* LoginAuthController.xib */; };
 		431E8E5D1AE9FC1C00EA644C /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E8E561AE9FC1C00EA644C /* LoginController.m */; };
 		431E8E5E1AE9FC1C00EA644C /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431E8E571AE9FC1C00EA644C /* LoginController.xib */; };
-		431E8E5F1AE9FC1C00EA644C /* WatingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E8E591AE9FC1C00EA644C /* WatingController.m */; };
-		431E8E601AE9FC1C00EA644C /* WatingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431E8E5A1AE9FC1C00EA644C /* WatingController.xib */; };
 		431E8E6C1AE9FC3200EA644C /* AuthenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E8E621AE9FC3200EA644C /* AuthenViewController.m */; };
 		431E8E6D1AE9FC3200EA644C /* AuthenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431E8E631AE9FC3200EA644C /* AuthenViewController.xib */; };
 		431E8E6E1AE9FC3200EA644C /* CustomNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E8E651AE9FC3200EA644C /* CustomNavigator.m */; };
@@ -204,6 +206,12 @@
 		05F834B81B0ACC7500594A73 /* TransactionResultHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionResultHeaderView.xib; sourceTree = "<group>"; };
 		05F834BB1B0AD19F00594A73 /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
 		05F834BC1B0AD19F00594A73 /* pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass.png; sourceTree = "<group>"; };
+		05F834C21B0B2F8B00594A73 /* login_btn_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_btn_press.png; sourceTree = "<group>"; };
+		05F834C41B0B311F00594A73 /* BCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTextField.h; sourceTree = "<group>"; };
+		05F834C51B0B311F00594A73 /* BCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTextField.m; sourceTree = "<group>"; };
+		05F834C71B0B346900594A73 /* LoginViewControlelr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewControlelr.h; path = Login/LoginViewControlelr.h; sourceTree = "<group>"; };
+		05F834C81B0B346900594A73 /* LoginViewControlelr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewControlelr.m; path = Login/LoginViewControlelr.m; sourceTree = "<group>"; };
+		05F834C91B0B346900594A73 /* LoginViewControlelr.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewControlelr.xib; path = Login/LoginViewControlelr.xib; sourceTree = "<group>"; };
 		430122A21AFCB72900180716 /* LeftMenuHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuHome.h; path = MenuHome/LeftMenuHome.h; sourceTree = "<group>"; };
 		430122A31AFCB72900180716 /* LeftMenuHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuHome.m; path = MenuHome/LeftMenuHome.m; sourceTree = "<group>"; };
 		430122A41AFCB72900180716 /* LeftMenuHome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeftMenuHome.xib; path = MenuHome/LeftMenuHome.xib; sourceTree = "<group>"; };
@@ -269,9 +277,6 @@
 		431E8E551AE9FC1C00EA644C /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = Login/LoginController.h; sourceTree = "<group>"; };
 		431E8E561AE9FC1C00EA644C /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = Login/LoginController.m; sourceTree = "<group>"; };
 		431E8E571AE9FC1C00EA644C /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginController.xib; path = Login/LoginController.xib; sourceTree = "<group>"; };
-		431E8E581AE9FC1C00EA644C /* WatingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WatingController.h; path = Login/WatingController.h; sourceTree = "<group>"; };
-		431E8E591AE9FC1C00EA644C /* WatingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WatingController.m; path = Login/WatingController.m; sourceTree = "<group>"; };
-		431E8E5A1AE9FC1C00EA644C /* WatingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WatingController.xib; path = Login/WatingController.xib; sourceTree = "<group>"; };
 		431E8E611AE9FC3200EA644C /* AuthenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthenViewController.h; path = Register/AuthenViewController.h; sourceTree = "<group>"; };
 		431E8E621AE9FC3200EA644C /* AuthenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthenViewController.m; path = Register/AuthenViewController.m; sourceTree = "<group>"; };
 		431E8E631AE9FC3200EA644C /* AuthenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AuthenViewController.xib; path = Register/AuthenViewController.xib; sourceTree = "<group>"; };
@@ -586,6 +591,8 @@
 				055BB4181B01D3D800F66C65 /* CoreData.xcdatamodeld */,
 				05E623B41B09FF9C002B9FEA /* BCTableView.h */,
 				05E623B51B09FF9C002B9FEA /* BCTableView.m */,
+				05F834C41B0B311F00594A73 /* BCTextField.h */,
+				05F834C51B0B311F00594A73 /* BCTextField.m */,
 			);
 			path = "IB Checker";
 			sourceTree = "<group>";
@@ -656,9 +663,9 @@
 				431E8E551AE9FC1C00EA644C /* LoginController.h */,
 				431E8E561AE9FC1C00EA644C /* LoginController.m */,
 				431E8E571AE9FC1C00EA644C /* LoginController.xib */,
-				431E8E581AE9FC1C00EA644C /* WatingController.h */,
-				431E8E591AE9FC1C00EA644C /* WatingController.m */,
-				431E8E5A1AE9FC1C00EA644C /* WatingController.xib */,
+				05F834C71B0B346900594A73 /* LoginViewControlelr.h */,
+				05F834C81B0B346900594A73 /* LoginViewControlelr.m */,
+				05F834C91B0B346900594A73 /* LoginViewControlelr.xib */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -691,6 +698,7 @@
 		431E8E321AE9FA4000EA644C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				05F834C21B0B2F8B00594A73 /* login_btn_press.png */,
 				431E8EC11AEA03B000EA644C /* im_la_en.png */,
 				431E8EC21AEA03B000EA644C /* im_la_vn.png */,
 				431E8E441AE9FBAC00EA644C /* bg_btnlogin.png */,
@@ -911,7 +919,9 @@
 				431E8E721AE9FC3200EA644C /* RegisterViewController.xib in Resources */,
 				05E6DEE81B0AB8BA00399DAC /* TransactionResultCell.xib in Resources */,
 				431E8E3D1AE9FBA100EA644C /* bg_help_register.png in Resources */,
+				05F834C31B0B2F8B00594A73 /* login_btn_press.png in Resources */,
 				431E8E6D1AE9FC3200EA644C /* AuthenViewController.xib in Resources */,
+				05F834CB1B0B346900594A73 /* LoginViewControlelr.xib in Resources */,
 				431E8EC41AEA03B000EA644C /* im_la_vn.png in Resources */,
 				431E8E4D1AE9FBB500EA644C /* RegisterHelp.html in Resources */,
 				431E8E5E1AE9FC1C00EA644C /* LoginController.xib in Resources */,
@@ -924,7 +934,6 @@
 				05E842761B0A2B9D00B196DD /* bg_bar_check_code.png in Resources */,
 				430122AB1AFCC01800180716 /* ic_avata_leftmenu.png in Resources */,
 				05F834BD1B0AD19F00594A73 /* fail.png in Resources */,
-				431E8E601AE9FC1C00EA644C /* WatingController.xib in Resources */,
 				05E6DEE01B0AB6B000399DAC /* TransactionResultViewController.xib in Resources */,
 				05DA0AEA1B075B990013365B /* HeaderSectionView.xib in Resources */,
 				05E3848D1B06ECE2006FF578 /* arrow_right.png in Resources */,
@@ -961,9 +970,9 @@
 				055BB41D1B01D61200F66C65 /* User.m in Sources */,
 				431E8E9F1AE9FCE600EA644C /* AFSecurityPolicy.m in Sources */,
 				05D8F8C01B00BA9800F70FC7 /* BaseViewController.m in Sources */,
-				431E8E5F1AE9FC1C00EA644C /* WatingController.m in Sources */,
 				431E8E9E1AE9FCE600EA644C /* AFNetworkReachabilityManager.m in Sources */,
 				431E8EB61AE9FD0F00EA644C /* Utils.m in Sources */,
+				05F834C61B0B311F00594A73 /* BCTextField.m in Sources */,
 				4312A0A91AF8669200059EE9 /* DataBaseHelper.m in Sources */,
 				431E8E6C1AE9FC3200EA644C /* AuthenViewController.m in Sources */,
 				4381BB5C1B00BC7D00F32433 /* NSString+MD5.m in Sources */,
@@ -974,6 +983,7 @@
 				431E8EA71AE9FCE600EA644C /* UIAlertView+AFNetworking.m in Sources */,
 				431E8EA51AE9FCE600EA644C /* AFNetworkActivityIndicatorManager.m in Sources */,
 				431E8EA01AE9FCE600EA644C /* AFURLConnectionOperation.m in Sources */,
+				05F834CA1B0B346900594A73 /* LoginViewControlelr.m in Sources */,
 				05D8F8B61B00AB2000F70FC7 /* NSDictionary+Extra.m in Sources */,
 				4312A0A61AF864B600059EE9 /* FMResultSet.m in Sources */,
 				05E623B61B09FF9C002B9FEA /* BCTableView.m in Sources */,

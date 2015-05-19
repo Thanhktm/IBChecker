@@ -7,9 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "WatingController.h"
+#import "LoginViewControlelr.h"
 #import "DataBaseHelper.h"
-#import "TransactionsViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,10 +27,11 @@
     
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
-    TransactionsViewController *viewController = [[TransactionsViewController alloc] init];
-    viewController.managedObjectContext = self.managedObjectContext;
-    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:viewController];
+        LoginViewControlelr *loginViewControlelr = [[LoginViewControlelr alloc] init];
+    loginViewControlelr.managedObjectContext = self.managedObjectContext;
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:loginViewControlelr];
     self.window.rootViewController = navController;
+    
     [self.window makeKeyAndVisible];
     
     return YES;
