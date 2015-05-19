@@ -13,5 +13,6 @@
 
 NSString* const URL_SERVER = @"http://118.70.157.239:9080/IBSServerApp/";
 NSString* const PING_SERVER= @"";
+NSString* const MY_TOKEN = @"Token";
 
 @end

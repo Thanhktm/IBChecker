@@ -15,6 +15,7 @@
 #import "HelpViewController.h"
 #import "LoginAuthController.h"
 #import "Utils.h"
+//#import "NSString+MD5.h"
 
 @interface WatingController ()<MBProgressHUDDelegate>{
     MBProgressHUD *hud;
@@ -35,6 +36,10 @@
 - (void)myProgressTask {
     sleep(3);
     LoginConfig *loginObject = [DataBaseHelper getLoginConfig:1];
+//    NSString *result;
+//    NSString *decodedString = [NSString stringWithUTF8String:[@"1" cStringUsingEncoding:[NSString defaultCStringEncoding]]];
+//    result = [decodedString MD5Hash];
+//    NSLog(@" nhay hay ko %@",result);
     if(loginObject != nil){
         if(loginObject.statusLanguage == 1){
             [Language setLanguage:@"vi"];
