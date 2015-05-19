@@ -41,5 +41,6 @@
 
 "Saving acocunt" = "TK nhận lãi";
 "Accumulated principal" = "Cộng dồn vào gốc";
-
+"Fail transaction" = "Chuyển khoản thất bại";
+"Success transaction" = "Chuyển khoản thành công";
 //Thanhnd end

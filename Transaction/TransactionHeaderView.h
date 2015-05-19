@@ -11,6 +11,7 @@
 @class TransactionHeaderView;
 @protocol TransactionHeaderDelegate <NSObject>
 - (void) didChangeButtonCheckAll:(TransactionHeaderView *)header;
+- (void) didOutOfMoney;
 @end
 
 @interface TransactionHeaderView : UITableViewCell

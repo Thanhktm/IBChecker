@@ -62,7 +62,9 @@
     }
 
     _account.checked  = (numberChecked == numberTransaction);
-    _lbAvailableAfter.text = [Account formatNumber:(account.availbleBalance - totalChecked)];
+    _account.available = account.availbleBalance - totalChecked;
+
+    _lbAvailableAfter.text = [Account formatNumber:_account.available];
     NSString *string = [NSString stringWithFormat:@"%d của %d món đang chọn", numberChecked, numberTransaction];
     
     NSMutableAttributedString *attrs = [[NSMutableAttributedString alloc] initWithString:string];
@@ -77,6 +79,9 @@
     _btnCheckAll.selected = account.checked;
     
     [self setNeedsDisplay];
+    if (_account.available < 0 && _delegate) {
+        [_delegate didOutOfMoney];
+    }
 }
 
 - (IBAction)btnCheckAllClicked:(UIButton *)button {

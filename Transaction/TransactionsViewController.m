@@ -13,15 +13,21 @@
 #import "Account.h"
 #import "Transaction.h"
 #import "TransactionDetailService.h"
+#import "TransactionApprove.h"
+#import "BCTableView.h"
+#import "TransactionResultViewController.h"
+
 
 @interface TransactionsViewController ()
 @property (strong) AuthService *authService;
 @property (strong) PendingTransactionsService *transactionService;
 @property (strong) TransactionDetailService * transactionDetailService;
+@property (strong) TransactionApprove * transactionApproveService;
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet BCTableView *tableView;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong) User *user;
+@property (strong, nonatomic) IBOutlet UITextField *txtApproveCode;
 @property (nonatomic) int page;
 @end
 
@@ -29,10 +35,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    // Do any additional setup after loading the view from its nib.
+    
 //    [self initializeSearchController];
-    
-    
     
     NSArray *userResult = [self fetchEntity:@"User"];
     _page = 1;
@@ -44,6 +49,8 @@
         
         _transactionDetailService = [[TransactionDetailService alloc] initWithDelegate:self authtoken:_user.authtoken];
         
+        _transactionApproveService = [[TransactionApprove alloc] initWithDelegate:self authtoken:_user.authtoken];
+        
     } else {
         _authService = [[AuthService alloc] initWithDelegate:self authtoken:nil];
         [_authService login:@"sn_checker" password:@"96e79218965eb72c92a549dd5a330112"];
@@ -52,8 +59,40 @@
     _refreshControl = [[UIRefreshControl alloc] init];
     [_refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:_refreshControl];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self.tableView becomeFirstResponder];
+    
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(didTouchView)];
+    
+    [self.view addGestureRecognizer:recognizer];
 }
+
+// Dissmiss the keyboard on tableView touches by making
+// the view the first responder
+- (void)didTouchView {
+    [self.tableView becomeFirstResponder];
+}
+
+- (IBAction)btnAprroveClicked:(id)sender {
+    [self didTouchView];
+    NSMutableString *strBuilder = [[NSMutableString alloc] init];
+    for (Account *a in _transactionService.accounts) {
+        if (a.available < 0) {
+            [[[UIAlertView alloc] initWithTitle:@"KHÔNG ĐỦ SỐ DƯ" message:@"Bạn phải hủy bỏ một số giao dịch" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            return;
+        }
+        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:a.transfers];
+        [array addObjectsFromArray:a.batchs];
+        [array addObjectsFromArray:a.others];
+        for (Transaction *t in array) {
+            if(t.checked) [strBuilder appendFormat:@"%@|",t.tranSn];
+        }
+        
+    }
+    [strBuilder deleteCharactersInRange:NSMakeRange([strBuilder length] - 1, 1)];
+    [_transactionApproveService approveCode:_txtApproveCode.text transactions:strBuilder];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -97,64 +136,13 @@
 #pragma mark - UISearchResultsUpdating
 
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
-    
-//    //get search text from user input
-//    NSString *searchText = [self.searchController.searchBar text];
-//    
-//    //exit if there is no search text (i.e. user tapped on the search bar and did not enter text yet)
-//    if(![searchText length] > 0) {
-//        
-//        return;
-//    }
-//    //handle when there is search text entered by the user
-//    else {
-//        
-//        //based on the user's search, we will update the contents of the tableSections and tableSectionsAndItems properties
-//        [self.tableSections removeAllObjects];
-//        
-//        [self.tableSectionsAndItems removeAllObjects];
-//        
-//        
-//        NSString *firstSearchCharacter = [searchText substringToIndex:1];
-//        
-//        //handle when user taps into search bear and there is no text entered yet
-//        if([searchText length] == 0) {
-//            
-//            self.tableSections = [[Item fetchDistinctItemGroupsInManagedObjectContext:self.managedObjectContext] mutableCopy];
-//            
-//            self.tableSectionsAndItems = [[Item fetchItemNamesByGroupInManagedObjectContext:self.managedObjectContext] mutableCopy];
-//        }
-//        //handle when user types in one or more characters in the search bar
-//        else if(searchText.length > 0) {
-//            
-//            //the table section will always be based off of the first letter of the group
-//            NSString *upperCaseFirstSearchCharacter = [firstSearchCharacter uppercaseString];
-//            
-//            self.tableSections = [[[NSArray alloc] initWithObjects:upperCaseFirstSearchCharacter, nil] mutableCopy];
-//            
-//            
-//            //there will only be one section (based on the first letter of the search text) - but the property requires an array for cases when there are multiple sections
-//            NSDictionary *namesByGroup = [Item fetchItemNamesByGroupFilteredBySearchText:searchText inManagedObjectContext:self.managedObjectContext];
-//            
-//            self.tableSectionsAndItems = [[[NSArray alloc] initWithObjects:namesByGroup, nil] mutableCopy];
-//        }
-//        
-//        //now that the tableSections and tableSectionsAndItems properties are updated, reload the UISearchController's tableview
-//        [((UITableViewController *)self.searchController.searchResultsController).tableView reloadData];
-//    }
+       
 }
 
 #pragma mark - UISearchBarDelegate methods
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     
-//    [self.tableSections removeAllObjects];
-//    
-//    [self.tableSectionsAndItems removeAllObjects];
-//    
-//    self.tableSections = [[Item fetchDistinctItemGroupsInManagedObjectContext:self.managedObjectContext] mutableCopy];
-//    
-//    self.tableSectionsAndItems = [[Item fetchItemNamesByGroupInManagedObjectContext:self.managedObjectContext] mutableCopy];
 }
 
 #pragma mark UIsearch filter data
@@ -188,6 +176,13 @@
     
     if (service == _transactionDetailService && [_transactionDetailService parser:data context:nil]) {
         [_tableView reloadData];
+    }
+    
+    if (service == _transactionApproveService && [_transactionApproveService parser:data context:nil]) {
+        TransactionResultViewController *resultViewController = [[TransactionResultViewController alloc] init];
+        resultViewController.listFaild = _transactionApproveService.listFaild;
+        resultViewController.listSucc = _transactionApproveService.listSucc;
+        [self.navigationController pushViewController:resultViewController animated:YES];
     }
     [super successRequest:service response:data];
 }
@@ -295,5 +290,9 @@
 
 - (void)didChangeButtonCheckAll:(TransactionHeaderView *)header {
     [_tableView reloadData];
+}
+
+- (void)didOutOfMoney{
+    [[[UIAlertView alloc] initWithTitle:@"KHÔNG ĐỦ SỐ DƯ" message:@"Bạn phải hủy bỏ một số giao dịch" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 @end

@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "WatingController.h"
-#import "TransactionsViewController.h"
+
 #import <CoreData/CoreData.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 //@property (strong,nonatomic) WatingController *viewController;
-@property (strong,nonatomic) TransactionsViewController *viewController;
 
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

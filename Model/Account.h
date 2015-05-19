@@ -16,5 +16,5 @@
 @property (nonatomic, retain) NSMutableArray * batchs;
 @property (nonatomic, retain) NSMutableArray * others;
 @property (nonatomic) BOOL checked;
-
+@property (nonatomic) double available;
 @end

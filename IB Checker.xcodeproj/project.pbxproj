@@ -32,8 +32,21 @@
 		05E384891B06D1D1006FF578 /* TransactionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E384881B06D1D1006FF578 /* TransactionHeaderView.m */; };
 		05E3848C1B06ECE2006FF578 /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E3848A1B06ECE2006FF578 /* arrow_down.png */; };
 		05E3848D1B06ECE2006FF578 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E3848B1B06ECE2006FF578 /* arrow_right.png */; };
+		05E623B61B09FF9C002B9FEA /* BCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E623B51B09FF9C002B9FEA /* BCTableView.m */; };
+		05E623B91B0A003A002B9FEA /* KeyboardBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E623B81B0A003A002B9FEA /* KeyboardBar.m */; };
+		05E6DEDF1B0AB6B000399DAC /* TransactionResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6DEDD1B0AB6B000399DAC /* TransactionResultViewController.m */; };
+		05E6DEE01B0AB6B000399DAC /* TransactionResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E6DEDE1B0AB6B000399DAC /* TransactionResultViewController.xib */; };
+		05E6DEE71B0AB8BA00399DAC /* TransactionResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6DEE51B0AB8BA00399DAC /* TransactionResultCell.m */; };
+		05E6DEE81B0AB8BA00399DAC /* TransactionResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E6DEE61B0AB8BA00399DAC /* TransactionResultCell.xib */; };
+		05E842761B0A2B9D00B196DD /* bg_bar_check_code.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E842751B0A2B9D00B196DD /* bg_bar_check_code.png */; };
+		05E842781B0A2D0E00B196DD /* btn_approve.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E842771B0A2D0E00B196DD /* btn_approve.png */; };
+		05E8427B1B0A31B000B196DD /* TransactionApprove.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E8427A1B0A31B000B196DD /* TransactionApprove.m */; };
 		05EDED591B0834FF00E85666 /* TransactionDetailService.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EDED581B0834FF00E85666 /* TransactionDetailService.m */; };
 		05EEBE451B0197970081BE80 /* AuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EEBE441B0197970081BE80 /* AuthService.m */; };
+		05F834B91B0ACC7500594A73 /* TransactionResultHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F834B71B0ACC7500594A73 /* TransactionResultHeaderView.m */; };
+		05F834BA1B0ACC7500594A73 /* TransactionResultHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05F834B81B0ACC7500594A73 /* TransactionResultHeaderView.xib */; };
+		05F834BD1B0AD19F00594A73 /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F834BB1B0AD19F00594A73 /* fail.png */; };
+		05F834BE1B0AD19F00594A73 /* pass.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F834BC1B0AD19F00594A73 /* pass.png */; };
 		430122A51AFCB72900180716 /* LeftMenuHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 430122A31AFCB72900180716 /* LeftMenuHome.m */; };
 		430122A61AFCB72900180716 /* LeftMenuHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430122A41AFCB72900180716 /* LeftMenuHome.xib */; };
 		430122A81AFCBE4700180716 /* bg_leftmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 430122A71AFCBE4700180716 /* bg_leftmenu.png */; };
@@ -166,10 +179,29 @@
 		05E384881B06D1D1006FF578 /* TransactionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionHeaderView.m; sourceTree = "<group>"; };
 		05E3848A1B06ECE2006FF578 /* arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_down.png; sourceTree = "<group>"; };
 		05E3848B1B06ECE2006FF578 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
+		05E623B41B09FF9C002B9FEA /* BCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTableView.h; sourceTree = "<group>"; };
+		05E623B51B09FF9C002B9FEA /* BCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTableView.m; sourceTree = "<group>"; };
+		05E623B71B0A003A002B9FEA /* KeyboardBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardBar.h; sourceTree = "<group>"; };
+		05E623B81B0A003A002B9FEA /* KeyboardBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardBar.m; sourceTree = "<group>"; };
+		05E6DEDC1B0AB6B000399DAC /* TransactionResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionResultViewController.h; sourceTree = "<group>"; };
+		05E6DEDD1B0AB6B000399DAC /* TransactionResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionResultViewController.m; sourceTree = "<group>"; };
+		05E6DEDE1B0AB6B000399DAC /* TransactionResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionResultViewController.xib; sourceTree = "<group>"; };
+		05E6DEE41B0AB8BA00399DAC /* TransactionResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionResultCell.h; sourceTree = "<group>"; };
+		05E6DEE51B0AB8BA00399DAC /* TransactionResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionResultCell.m; sourceTree = "<group>"; };
+		05E6DEE61B0AB8BA00399DAC /* TransactionResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionResultCell.xib; sourceTree = "<group>"; };
+		05E842751B0A2B9D00B196DD /* bg_bar_check_code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_bar_check_code.png; sourceTree = "<group>"; };
+		05E842771B0A2D0E00B196DD /* btn_approve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_approve.png; sourceTree = "<group>"; };
+		05E842791B0A31B000B196DD /* TransactionApprove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionApprove.h; sourceTree = "<group>"; };
+		05E8427A1B0A31B000B196DD /* TransactionApprove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionApprove.m; sourceTree = "<group>"; };
 		05EDED571B0834FF00E85666 /* TransactionDetailService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionDetailService.h; sourceTree = "<group>"; };
 		05EDED581B0834FF00E85666 /* TransactionDetailService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionDetailService.m; sourceTree = "<group>"; };
 		05EEBE431B0197970081BE80 /* AuthService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthService.h; sourceTree = "<group>"; };
 		05EEBE441B0197970081BE80 /* AuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthService.m; sourceTree = "<group>"; };
+		05F834B61B0ACC7500594A73 /* TransactionResultHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionResultHeaderView.h; sourceTree = "<group>"; };
+		05F834B71B0ACC7500594A73 /* TransactionResultHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionResultHeaderView.m; sourceTree = "<group>"; };
+		05F834B81B0ACC7500594A73 /* TransactionResultHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionResultHeaderView.xib; sourceTree = "<group>"; };
+		05F834BB1B0AD19F00594A73 /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
+		05F834BC1B0AD19F00594A73 /* pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass.png; sourceTree = "<group>"; };
 		430122A21AFCB72900180716 /* LeftMenuHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuHome.h; path = MenuHome/LeftMenuHome.h; sourceTree = "<group>"; };
 		430122A31AFCB72900180716 /* LeftMenuHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuHome.m; path = MenuHome/LeftMenuHome.m; sourceTree = "<group>"; };
 		430122A41AFCB72900180716 /* LeftMenuHome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeftMenuHome.xib; path = MenuHome/LeftMenuHome.xib; sourceTree = "<group>"; };
@@ -367,6 +399,8 @@
 				055BB41F1B01E56900F66C65 /* PendingTransactionsService.m */,
 				05EDED571B0834FF00E85666 /* TransactionDetailService.h */,
 				05EDED581B0834FF00E85666 /* TransactionDetailService.m */,
+				05E842791B0A31B000B196DD /* TransactionApprove.h */,
+				05E8427A1B0A31B000B196DD /* TransactionApprove.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -383,6 +417,17 @@
 				05E384881B06D1D1006FF578 /* TransactionHeaderView.m */,
 				05DA0AE71B075A060013365B /* TransactionTableViewCell.xib */,
 				05DA0AE91B075B990013365B /* HeaderSectionView.xib */,
+				05E623B71B0A003A002B9FEA /* KeyboardBar.h */,
+				05E623B81B0A003A002B9FEA /* KeyboardBar.m */,
+				05E6DEDC1B0AB6B000399DAC /* TransactionResultViewController.h */,
+				05E6DEDD1B0AB6B000399DAC /* TransactionResultViewController.m */,
+				05E6DEDE1B0AB6B000399DAC /* TransactionResultViewController.xib */,
+				05E6DEE41B0AB8BA00399DAC /* TransactionResultCell.h */,
+				05E6DEE51B0AB8BA00399DAC /* TransactionResultCell.m */,
+				05E6DEE61B0AB8BA00399DAC /* TransactionResultCell.xib */,
+				05F834B61B0ACC7500594A73 /* TransactionResultHeaderView.h */,
+				05F834B71B0ACC7500594A73 /* TransactionResultHeaderView.m */,
+				05F834B81B0ACC7500594A73 /* TransactionResultHeaderView.xib */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -390,6 +435,10 @@
 		05E3847B1B06C0A0006FF578 /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
+				05F834BB1B0AD19F00594A73 /* fail.png */,
+				05F834BC1B0AD19F00594A73 /* pass.png */,
+				05E842771B0A2D0E00B196DD /* btn_approve.png */,
+				05E842751B0A2B9D00B196DD /* bg_bar_check_code.png */,
 				05E3848A1B06ECE2006FF578 /* arrow_down.png */,
 				05E3848B1B06ECE2006FF578 /* arrow_right.png */,
 				05E3847C1B06C0AF006FF578 /* uncheck.png */,
@@ -529,6 +578,8 @@
 				05D8F8C11B00BABE00F70FC7 /* BaseTableViewController.h */,
 				05D8F8C21B00BABE00F70FC7 /* BaseTableViewController.m */,
 				055BB4181B01D3D800F66C65 /* CoreData.xcdatamodeld */,
+				05E623B41B09FF9C002B9FEA /* BCTableView.h */,
+				05E623B51B09FF9C002B9FEA /* BCTableView.m */,
 			);
 			path = "IB Checker";
 			sourceTree = "<group>";
@@ -825,8 +876,11 @@
 			files = (
 				430122A61AFCB72900180716 /* LeftMenuHome.xib in Resources */,
 				430122B51AFCC99000180716 /* LeftMenuCell.xib in Resources */,
+				05F834BE1B0AD19F00594A73 /* pass.png in Resources */,
 				05E3847E1B06C0AF006FF578 /* uncheck.png in Resources */,
+				05E842781B0A2D0E00B196DD /* btn_approve.png in Resources */,
 				05E3847A1B06B633006FF578 /* bg_section.png in Resources */,
+				05F834BA1B0ACC7500594A73 /* TransactionResultHeaderView.xib in Resources */,
 				430BA5251AF8BC2E00CA7CFB /* IBChecker.sqlite in Resources */,
 				431E8E4C1AE9FBB500EA644C /* AuthenHelp.html in Resources */,
 				431E8EB91AE9FDD800EA644C /* Default-568h@2x.png in Resources */,
@@ -836,6 +890,7 @@
 				430122A81AFCBE4700180716 /* bg_leftmenu.png in Resources */,
 				431E8E431AE9FBA100EA644C /* txt_login.png in Resources */,
 				431E8E721AE9FC3200EA644C /* RegisterViewController.xib in Resources */,
+				05E6DEE81B0AB8BA00399DAC /* TransactionResultCell.xib in Resources */,
 				431E8E3D1AE9FBA100EA644C /* bg_help_register.png in Resources */,
 				431E8E6D1AE9FC3200EA644C /* AuthenViewController.xib in Resources */,
 				431E8EC41AEA03B000EA644C /* im_la_vn.png in Resources */,
@@ -847,8 +902,11 @@
 				431E8E3E1AE9FBA100EA644C /* bn_duongke.png in Resources */,
 				431E8E491AE9FBAC00EA644C /* bg_textlogin.png in Resources */,
 				431E8E5C1AE9FC1C00EA644C /* LoginAuthController.xib in Resources */,
+				05E842761B0A2B9D00B196DD /* bg_bar_check_code.png in Resources */,
 				430122AB1AFCC01800180716 /* ic_avata_leftmenu.png in Resources */,
+				05F834BD1B0AD19F00594A73 /* fail.png in Resources */,
 				431E8E601AE9FC1C00EA644C /* WatingController.xib in Resources */,
+				05E6DEE01B0AB6B000399DAC /* TransactionResultViewController.xib in Resources */,
 				05DA0AEA1B075B990013365B /* HeaderSectionView.xib in Resources */,
 				05E3848D1B06ECE2006FF578 /* arrow_right.png in Resources */,
 				431E8E701AE9FC3200EA644C /* HelpViewController.xib in Resources */,
@@ -898,15 +956,19 @@
 				431E8EA01AE9FCE600EA644C /* AFURLConnectionOperation.m in Sources */,
 				05D8F8B61B00AB2000F70FC7 /* NSDictionary+Extra.m in Sources */,
 				4312A0A61AF864B600059EE9 /* FMResultSet.m in Sources */,
+				05E623B61B09FF9C002B9FEA /* BCTableView.m in Sources */,
+				05E6DEE71B0AB8BA00399DAC /* TransactionResultCell.m in Sources */,
 				05D8F8B91B00AC6600F70FC7 /* Transaction.m in Sources */,
 				431E8EA81AE9FCE600EA644C /* UIButton+AFNetworking.m in Sources */,
 				05D8F8B11B00A8CE00F70FC7 /* Item.m in Sources */,
 				05DA0AED1B078F760013365B /* Benefit.m in Sources */,
+				05F834B91B0ACC7500594A73 /* TransactionResultHeaderView.m in Sources */,
 				431E8EA61AE9FCE600EA644C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				431E8E9B1AE9FCE600EA644C /* AFHTTPRequestOperation.m in Sources */,
 				431E8EB51AE9FD0F00EA644C /* Constant.m in Sources */,
 				430122B41AFCC99000180716 /* LeftMenuCell.m in Sources */,
 				431E8EAC1AE9FCE600EA644C /* UIWebView+AFNetworking.m in Sources */,
+				05E8427B1B0A31B000B196DD /* TransactionApprove.m in Sources */,
 				431E8E9D1AE9FCE600EA644C /* AFHTTPSessionManager.m in Sources */,
 				05D7A92A1B0618AC00388443 /* Account.m in Sources */,
 				431E8EAF1AE9FCF600EA644C /* Language.m in Sources */,
@@ -916,12 +978,14 @@
 				05EEBE451B0197970081BE80 /* AuthService.m in Sources */,
 				431E8EA11AE9FCE600EA644C /* AFURLRequestSerialization.m in Sources */,
 				431E8E0D1AE9F85700EA644C /* AppDelegate.m in Sources */,
+				05E623B91B0A003A002B9FEA /* KeyboardBar.m in Sources */,
 				431E8EA31AE9FCE600EA644C /* AFURLSessionManager.m in Sources */,
 				431E8EA41AE9FCE600EA644C /* Reachability.m in Sources */,
 				4312A0A21AF864B600059EE9 /* FMDatabase.m in Sources */,
 				431E8E6E1AE9FC3200EA644C /* CustomNavigator.m in Sources */,
 				05EDED591B0834FF00E85666 /* TransactionDetailService.m in Sources */,
 				055BB41A1B01D3D800F66C65 /* CoreData.xcdatamodeld in Sources */,
+				05E6DEDF1B0AB6B000399DAC /* TransactionResultViewController.m in Sources */,
 				055BB4201B01E56900F66C65 /* PendingTransactionsService.m in Sources */,
 				4312A0AD1AF8702500059EE9 /* LoginConfig.m in Sources */,
 				431E8E9C1AE9FCE600EA644C /* AFHTTPRequestOperationManager.m in Sources */,

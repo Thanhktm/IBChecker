@@ -116,7 +116,10 @@
     transaction.interestRate = [dictionary doubleForKey:@"interestRate"];
     transaction.term = [dictionary stringForKey:@"term"];
     transaction.type = [dictionary intForKey:@"type"];
-    
+    transaction.message = [dictionary stringForKey:@"message"];
+    transaction.sourceAcc = [dictionary stringForKey:@"sourceAcc"];
+    transaction.info = [dictionary stringForKey:@"info"];
+    transaction.benefit = [dictionary stringForKey:@"benefit"];
     // Check is detail then no need convert from info1 to type
     transaction.isDetail = NO;
     if (transaction.createBy || [@"" isEqualToString:transaction.createBy]) {

@@ -11,7 +11,10 @@
 #import "TransactionTableViewCell.h"
 
 @interface TransactionsViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource,
-TransactionCellDelegate, TransactionHeaderDelegate, UISearchResultsUpdating, UISearchBarDelegate>
+TransactionCellDelegate, TransactionHeaderDelegate, UISearchResultsUpdating, UISearchBarDelegate, UITextFieldDelegate> {
+
+
+}
 
 @property (nonatomic, strong) UISearchController *searchController;
 @end

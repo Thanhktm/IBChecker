@@ -28,7 +28,14 @@ typedef enum {
 @property (nonatomic) double  interestAmount;
 @property (nonatomic) double interestRate;
 @property (nonatomic, retain) NSString * term;
+
+@property (nonatomic, retain) NSString * message;
+@property (nonatomic, retain) NSString * benefit;
+@property (nonatomic, retain) NSString * info;
+@property (nonatomic, retain) NSString * sourceAcc;
 @property (nonatomic) int type;
+
+@property (nonatomic, retain) NSString * searchContent;
 
 // Additional properties for UI
 @property (nonatomic) BOOL checked;

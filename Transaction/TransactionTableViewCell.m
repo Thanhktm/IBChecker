@@ -273,6 +273,7 @@
     _btnExpand.selected = trasaction.expand;
     _lbAmount.text = [Transaction formatNumber:trasaction.amount];
     _lbCurrency.text = trasaction.currencyCode;
+    _transaction.searchContent = [NSString stringWithFormat:@"%@ %@ %@ %@",_lbInfo1.text, _lbInfo2.text, _lbTitle.text, _lbAmount.text];
     
     [self setNeedsDisplay];
 }
