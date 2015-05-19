@@ -9,6 +9,7 @@
 #import "Utils.h"
 #import "Reachability.h"
 #import "UrlHelper.h"
+#import <CommonCrypto/CommonDigest.h>
 
 
 @implementation Utils
@@ -86,5 +87,6 @@
     [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
     [[mainView layer] addAnimation:animation forKey:@"SlideView"];
 }
+
 
 @end

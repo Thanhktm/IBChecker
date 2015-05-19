@@ -19,6 +19,7 @@ typedef enum {
 
 extern NSString* const URL_SERVER;
 extern NSString* const PING_SERVER;
+extern NSString* const MY_TOKEN;
 
 
 @end

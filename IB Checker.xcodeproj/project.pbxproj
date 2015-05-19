@@ -88,6 +88,8 @@
 		431E8EBC1AE9FFE800EA644C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 431E8EBE1AE9FFE800EA644C /* Localizable.strings */; };
 		431E8EC31AEA03B000EA644C /* im_la_en.png in Resources */ = {isa = PBXBuildFile; fileRef = 431E8EC11AEA03B000EA644C /* im_la_en.png */; };
 		431E8EC41AEA03B000EA644C /* im_la_vn.png in Resources */ = {isa = PBXBuildFile; fileRef = 431E8EC21AEA03B000EA644C /* im_la_vn.png */; };
+		4381BB5C1B00BC7D00F32433 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4381BB5A1B00BC7D00F32433 /* NSString+MD5.m */; };
+		43B1D1991B04516D00C47ED8 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B1D1981B04516D00C47ED8 /* UserInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +232,10 @@
 		431E8EC01AEA000C00EA644C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		431E8EC11AEA03B000EA644C /* im_la_en.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = im_la_en.png; path = Resources/Login/im_la_en.png; sourceTree = "<group>"; };
 		431E8EC21AEA03B000EA644C /* im_la_vn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = im_la_vn.png; path = Resources/Login/im_la_vn.png; sourceTree = "<group>"; };
+		4381BB591B00BC7D00F32433 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		4381BB5A1B00BC7D00F32433 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		43B1D1971B04516D00C47ED8 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = "Constrant+Utils/UserInfo.h"; sourceTree = "<group>"; };
+		43B1D1981B04516D00C47ED8 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = "Constrant+Utils/UserInfo.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +475,7 @@
 		431E8E311AE9FA3500EA644C /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				4381BB581B00BC7D00F32433 /* NSString-MD5 */,
 				430BA5351AF8D8AF00CA7CFB /* MBProgressHUD */,
 				4312A0961AF864B600059EE9 /* FMDB */,
 				431E8E731AE9FCE600EA644C /* AFNetworking */,
@@ -584,8 +591,20 @@
 				431E8EB21AE9FD0F00EA644C /* Constant.m */,
 				431E8EB31AE9FD0F00EA644C /* Utils.h */,
 				431E8EB41AE9FD0F00EA644C /* Utils.m */,
+				43B1D1971B04516D00C47ED8 /* UserInfo.h */,
+				43B1D1981B04516D00C47ED8 /* UserInfo.m */,
 			);
 			name = "Constrant+Utils";
+			sourceTree = "<group>";
+		};
+		4381BB581B00BC7D00F32433 /* NSString-MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				4381BB591B00BC7D00F32433 /* NSString+MD5.h */,
+				4381BB5A1B00BC7D00F32433 /* NSString+MD5.m */,
+			);
+			name = "NSString-MD5";
+			path = "Library/NSString-MD5";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -723,6 +742,7 @@
 				431E8EB61AE9FD0F00EA644C /* Utils.m in Sources */,
 				4312A0A91AF8669200059EE9 /* DataBaseHelper.m in Sources */,
 				431E8E6C1AE9FC3200EA644C /* AuthenViewController.m in Sources */,
+				4381BB5C1B00BC7D00F32433 /* NSString+MD5.m in Sources */,
 				431E8EAA1AE9FCE600EA644C /* UIProgressView+AFNetworking.m in Sources */,
 				430BA5381AF8D8C500CA7CFB /* MBProgressHUD.m in Sources */,
 				431E8EA71AE9FCE600EA644C /* UIAlertView+AFNetworking.m in Sources */,
@@ -750,6 +770,7 @@
 				431E8E711AE9FC3200EA644C /* RegisterViewController.m in Sources */,
 				431E8EA21AE9FCE600EA644C /* AFURLResponseSerialization.m in Sources */,
 				431E8EAB1AE9FCE600EA644C /* UIRefreshControl+AFNetworking.m in Sources */,
+				43B1D1991B04516D00C47ED8 /* UserInfo.m in Sources */,
 				431E8EA91AE9FCE600EA644C /* UIImageView+AFNetworking.m in Sources */,
 				430122A51AFCB72900180716 /* LeftMenuHome.m in Sources */,
 				431E8E5D1AE9FC1C00EA644C /* LoginController.m in Sources */,

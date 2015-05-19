@@ -13,5 +13,6 @@
 
 NSString* const URL_SERVER = @"";
 NSString* const PING_SERVER= @"";
+NSString* const MY_TOKEN = @"Token";
 
 @end
