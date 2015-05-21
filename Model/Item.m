@@ -33,6 +33,13 @@
     
     return  [NSString stringWithFormat:@"%.3F%%", number];
 }
+
++ (NSString *)convertDateInt:(int)time {
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
+   return [NSDateFormatter localizedStringFromDate:date
+                                                          dateStyle:NSDateFormatterShortStyle
+                                                          timeStyle:NSDateFormatterShortStyle];
+}
 - (BOOL)loadFromItem:(Item *)item context:(NSManagedObjectContext *)context
 {
     return YES;

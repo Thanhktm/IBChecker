@@ -13,6 +13,9 @@
 @implementation PendingTransactionsService
 
 - (void)getTransactionsPage:(int)page {
+    if (page == 1) {
+        _accounts = nil;
+    }
     NSDictionary *params = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[NSString stringWithFormat:@"%d", page], @"pageNo", nil];
     [self post:@"requestPending" params:params];
 }

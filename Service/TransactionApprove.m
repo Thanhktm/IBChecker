@@ -22,6 +22,19 @@
     }
     _listFaild = [Transaction arrayFromArrayDictionary:[data arrayForKey:@"listFail"] context:context];
     _listSucc = [Transaction arrayFromArrayDictionary:[data arrayForKey:@"listSucc"] context:context];
+    
+    
+    if (_listSucc) {
+        for (Transaction *t in _listSucc) {
+            t.status = TransactionSuccess;
+        }
+    }
+    
+    if (_listFaild) {
+        for (Transaction *t in _listFaild) {
+            t.status = TransactionFail;
+        }
+    }
     return YES;
 }
 @end

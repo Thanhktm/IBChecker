@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
 
-#define appDelegate ((UAAppDelegate *)[[UIApplication sharedApplication] delegate])
+#define appDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 

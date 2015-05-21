@@ -28,6 +28,8 @@
     _lbMessage.text = transaction.message;
     _lbAmout.text = [Transaction formatNumber:transaction.amount];
     
+    _lbStatus.text = (transaction.status == TransactionSuccess ? NSLocalizedString(@"Success status", @"") : NSLocalizedString(@"Fail status", @""));
+    
     // Not set currnency yet
 //    _lbCurrencyCode.text = ????
     
@@ -36,7 +38,7 @@
 
 + (CGFloat)heightForCellWithData:(Transaction *)transaction
 {
-    return 50.0f;
+    return 70.0f;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

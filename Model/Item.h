@@ -25,4 +25,5 @@
 
 + (id)objectFromDictionary:(NSDictionary *)dictionary context:(NSManagedObjectContext *)context;
 
++ (NSString *)convertDateInt:(int)time;
 @end

@@ -17,4 +17,5 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (NSArray *) fetchEntity: (NSString *)entityName;
+- (void) pushViewController:(UIViewController *)viewController animated:(BOOL)animated title:(NSString *)title;
 @end

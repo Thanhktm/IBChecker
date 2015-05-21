@@ -26,34 +26,29 @@
 
 @property (strong, nonatomic) IBOutlet BCTableView *tableView;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
-@property (strong) User *user;
+
 @property (strong, nonatomic) IBOutlet UITextField *txtApproveCode;
 @property (nonatomic) int page;
 @end
 
 @implementation TransactionsViewController
-
+- (BOOL)slideNavigationControllerShouldDisplayLeftMenu {
+    return YES;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
 //    [self initializeSearchController];
     
-    NSArray *userResult = [self fetchEntity:@"User"];
-    _page = 1;
-    if ([userResult count] > 0) {
-        _user = [userResult objectAtIndex:0];
-        // Init service
-        _transactionService = [[PendingTransactionsService alloc] initWithDelegate:self authtoken:_user.authtoken];
-        [_transactionService getTransactionsPage:_page];
-        
-        _transactionDetailService = [[TransactionDetailService alloc] initWithDelegate:self authtoken:_user.authtoken];
-        
-        _transactionApproveService = [[TransactionApprove alloc] initWithDelegate:self authtoken:_user.authtoken];
-        
-    } else {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
+    // Init service
+    _transactionService = [[PendingTransactionsService alloc] initWithDelegate:self authtoken:_user.authtoken];
+    
+    _transactionDetailService = [[TransactionDetailService alloc] initWithDelegate:self authtoken:_user.authtoken];
+    
+    _transactionApproveService = [[TransactionApprove alloc] initWithDelegate:self authtoken:_user.authtoken];
+    
+    
     
     _refreshControl = [[UIRefreshControl alloc] init];
     [_refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
@@ -64,16 +59,20 @@
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(didTouchView)];
     
     [self.view addGestureRecognizer:recognizer];
+    
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.navigationItem setHidesBackButton:YES];
-     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[[UIView alloc] init]];
+    [super viewWillAppear:animated];
+    [self setTitle:NSLocalizedString(@"Approve", @"")];
+    _page = 1;
+    [_transactionService getTransactionsPage:_page];
+
 
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [self.navigationItem setHidesBackButton:NO];
 }
 
 
@@ -109,6 +108,7 @@
     }
     [strBuilder deleteCharactersInRange:NSMakeRange([strBuilder length] - 1, 1)];
     [_transactionApproveService approveCode:_txtApproveCode.text transactions:strBuilder];
+    _txtApproveCode.text = @"";
 }
 
 
@@ -180,6 +180,7 @@
     if (service == _transactionDetailService) {
         // Show indicator
     }
+    [super startRequest:service];
 }
 
 - (void)successRequest:(BaseService *)service response:(NSDictionary *)data
@@ -201,7 +202,7 @@
             TransactionResultViewController *resultViewController = [[TransactionResultViewController alloc] init];
             resultViewController.listFaild = _transactionApproveService.listFaild;
             resultViewController.listSucc = _transactionApproveService.listSucc;
-            [self.navigationController pushViewController:resultViewController animated:YES];
+            [self pushViewController:resultViewController animated:YES title:NSLocalizedString(@"Result", @"")];
         } else {
             [[[UIAlertView alloc] initWithTitle:@"Cảnh báo" message:@"Mã xác nhận không đúng" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
         }
@@ -218,6 +219,8 @@
     if (service == _transactionDetailService) {
         // Hide indicator
     }
+    
+    [super finishRequest:service];
 }
 #pragma mark - Table view data source
 
@@ -294,6 +297,10 @@
     
     [cell cellWithData:transaction];
     return cell;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self didTouchView];
 }
 
 #pragma mark cell and header delegate

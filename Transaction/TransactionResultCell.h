@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbMessage;
 @property (strong, nonatomic) IBOutlet UILabel *lbCurrencyCode;
 
+@property (strong, nonatomic) IBOutlet UILabel *lbStatus;
 @property (nonatomic, strong) Transaction *transaction;
 
 - (void)cellWithData:(Transaction *)transaction;

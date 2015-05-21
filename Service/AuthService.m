@@ -18,6 +18,21 @@
 }
 
 - (BOOL) parser:(NSDictionary *)data context:(NSManagedObjectContext *) context {
+    if (![data valueForKey:@"authtoken"]) {
+        return NO;
+    }
+    NSFetchRequest * allUsers = [[NSFetchRequest alloc] init];
+    [allUsers setEntity:[NSEntityDescription entityForName:@"User" inManagedObjectContext:context]];
+    [allUsers setIncludesPropertyValues:NO]; //only fetch the managedObjectID
+    
+    NSError * error = nil;
+    NSArray * users = [context executeFetchRequest:allUsers error:&error];
+    //error handling goes here
+    for (NSManagedObject * user in users) {
+        [context deleteObject:user];
+    }
+    NSError *saveError = nil;
+    [context save:&saveError];
     _user = [User objectFromDictionary:data context:context];
     return YES;
 }

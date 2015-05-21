@@ -45,4 +45,17 @@
 "Accumulated principal" = "Cộng dồn vào gốc";
 "Fail transaction" = "Chuyển khoản thất bại";
 "Success transaction" = "Chuyển khoản thành công";
+
+"history" = "Lịch sử phê duyệt";
+"success" = "Đã duyệt";
+"fail" = "Thất bại";
+
+"To: %@" = "Đến: %@";
+"Settlement %@" = "Tất toán sổ %@";
+
+"Approve" = "Phê duyệt";
+"Result" = "Kết quả GD";
+
+"Success status" = "Trạng thái: Giao dịch thành công";
+"Fail status" = "Trạng thái: Giao dịch thất bại";
 //Thanhnd end

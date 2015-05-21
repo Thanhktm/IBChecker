@@ -15,6 +15,12 @@ typedef enum {
     TransactionTypeSettlement
 }TransactionType;
 
+
+typedef enum {
+    TransactionFail,
+    TransactionSuccess
+}TransactionStatus;
+
 @interface Transaction : Item
 @property (nonatomic, strong) NSString * tranSn;
 @property (nonatomic, retain) NSString * info1;
@@ -35,7 +41,12 @@ typedef enum {
 @property (nonatomic, retain) NSString * sourceAcc;
 @property (nonatomic) int type;
 
+
+@property (nonatomic) int transType;
+@property (nonatomic) int userId;
+@property (nonatomic, retain) NSString * approveTime;
 @property (nonatomic, retain) NSString * searchContent;
+@property (nonatomic) int status;
 
 // Additional properties for UI
 @property (nonatomic) BOOL checked;

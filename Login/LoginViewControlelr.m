@@ -10,7 +10,7 @@
 #import "AuthService.h"
 #import "BCTextField.h"
 #import "TransactionsViewController.h"
-
+#import "Constant.h"
 @interface LoginViewControlelr ()
 @property (nonatomic, strong) AuthService *authService;
 
@@ -27,6 +27,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBarHidden = YES;
+    
+    NSArray *arrayUser = [self fetchEntity:@"User"];
+    if ([arrayUser count] > 0) {
+        TransactionsViewController *transationViewControlelr = [[TransactionsViewController alloc] init];
+        transationViewControlelr.managedObjectContext = self.managedObjectContext;
+        [self.navigationController pushViewController:transationViewControlelr animated:YES];
+    }
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -39,7 +46,7 @@
 }
 
 - (IBAction)btnSignClicked:(id)sender {
-    [_btnSignIn setEnabled:NO];
+    
     if([_txtLogin.text length] > 0 && [_txtPassword.text length] >0) {
         [_authService login:_txtLogin.text password:_txtPassword.text];
     } else {
@@ -50,15 +57,14 @@
 #pragma mark service delegate
 
 - (void)startRequest:(BaseService *)service {
+    [_btnSignIn setEnabled:NO];
     [_indicator startAnimating];
     [_indicator setHidden:NO];
 }
 
 - (void)successRequest:(BaseService *)service response:(NSDictionary *)data {
     if ([_authService parser:data context:self.managedObjectContext]) {
-        TransactionsViewController *transationViewControlelr = [[TransactionsViewController alloc] init];
-        transationViewControlelr.managedObjectContext = self.managedObjectContext;
-        [self.navigationController pushViewController:transationViewControlelr animated:YES];
+        [appDelegate addSlideMenu];
     } else {
         [[[UIAlertView alloc] initWithTitle:@"Cảnh báo" message:@"Đăng nhập không thành công thử lại" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
         _txtPassword.text  = @"";
@@ -73,6 +79,7 @@
 }
 
 - (void)finishRequest:(BaseService *)service {
+    [_btnSignIn setEnabled:YES];
     [_indicator stopAnimating];
     [_indicator setHidden:YES];
 }

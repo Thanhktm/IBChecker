@@ -9,14 +9,22 @@
 #import "AppDelegate.h"
 #import "LoginViewControlelr.h"
 #import "DataBaseHelper.h"
+#import "SlideNavigationController.h"
+#import "BCNavigationControlelr.h"
+#import "MenuTableViewController.h"
+#import "TransactionsViewController.h"
+#import "User.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) LoginViewControlelr * loginViewController;
+@property (nonatomic, strong) UILabel *lbTitle;
 @end
 
 @implementation AppDelegate
 
-
+- (void)setTitle:(NSString *)title {
+    _lbTitle.text = title;
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //creat Database if not exit
@@ -27,14 +35,102 @@
     
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
-        LoginViewControlelr *loginViewControlelr = [[LoginViewControlelr alloc] init];
-    loginViewControlelr.managedObjectContext = self.managedObjectContext;
-    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:loginViewControlelr];
-    self.window.rootViewController = navController;
+    
+    NSArray *users = [self fetchEntity:@"User"];
+    if (!_user && [users count] > 0) {
+        
+        _user = [users objectAtIndex:0];
+        if (_user.authtoken) {
+            [self addSlideMenu];
+        } else {
+            [self login];
+        }
+    } else {
+        [self login];
+    }
+    
     
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+- (NSArray *) fetchEntity: (NSString *)entityName{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:entityName];
+    NSError *error = nil;
+    
+    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (error) {
+        NSLog(@"%@", [error userInfo]);
+        return nil;
+    }
+    
+    return results;
+}
+
+- (void)addSlideMenu {
+//    if (![SlideNavigationController sharedInstance].leftMenu) {
+    
+        TransactionsViewController  *approveViewController = [[TransactionsViewController alloc] init];
+        approveViewController.user = _user;
+        
+        SlideNavigationController *nav = [[SlideNavigationController alloc] initWithRootViewController:approveViewController];
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bg_navigation.png"] forBarMetrics:UIBarMetricsDefault];
+
+        NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:                                                   [UIColor whiteColor],NSForegroundColorAttributeName, nil];
+        
+        [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
+    
+        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+        
+        MenuTableViewController *menuViewControlelr = [[MenuTableViewController alloc] init];
+        menuViewControlelr.managedObjectContext = self.managedObjectContext;
+        [SlideNavigationController sharedInstance].leftMenu = menuViewControlelr;
+        [SlideNavigationController sharedInstance].menuRevealAnimationDuration = .18;
+        
+        // Creating a custom bar button for right menu
+        UIButton *button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 22, 19)];
+        [button setBackgroundImage:[UIImage imageNamed:@"ic_menu_toge"] forState:UIControlStateNormal];
+        [button addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu) forControlEvents:UIControlEventTouchUpInside];
+        
+        _lbTitle = [[UILabel alloc] initWithFrame:CGRectMake(30, 0, 160, 19)];
+        _lbTitle.font = [UIFont systemFontOfSize:19];
+        [_lbTitle setTextColor:[UIColor whiteColor]];
+        
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 190, 19)];
+        
+        [view addSubview:_lbTitle];
+        [view addSubview:button];
+        
+        UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
+        [SlideNavigationController sharedInstance].leftBarButtonItem = leftBarButtonItem;
+        
+        [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidClose object:nil queue:nil usingBlock:^(NSNotification *note) {
+            NSString *menu = note.userInfo[@"menu"];
+            NSLog(@"Closed %@", menu);
+        }];
+        
+        [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidOpen object:nil queue:nil usingBlock:^(NSNotification *note) {
+            NSString *menu = note.userInfo[@"menu"];
+            NSLog(@"Opened %@", menu);
+        }];
+        
+        [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidReveal object:nil queue:nil usingBlock:^(NSNotification *note) {
+            NSString *menu = note.userInfo[@"menu"];
+            NSLog(@"Revealed %@", menu);
+        }];
+//    }
+   
+    
+    self.window.rootViewController = [SlideNavigationController sharedInstance];
+}
+
+- (void)login {
+    if (!_loginViewController) {
+        _loginViewController = [[LoginViewControlelr alloc] init];
+        _loginViewController.managedObjectContext = self.managedObjectContext;
+    }
+    
+    self.window.rootViewController = _loginViewController;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

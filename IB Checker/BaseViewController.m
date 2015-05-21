@@ -8,6 +8,9 @@
 
 #import "BaseViewController.h"
 #import "AppDelegate.h"
+#import "Constant.h"
+#import "MBProgressHUD.h"
+
 @interface BaseViewController ()
 
 @end
@@ -24,8 +27,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) startRequest:(BaseService *)service {
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
 
+#pragma mark set title for ic toge
+- (void)setTitle:(NSString *)title {
+    [appDelegate setTitle:title];
+}
+
+#pragma mark pushview custom
+- (void) pushViewController:(UIViewController *)viewController animated:(BOOL)animated title:(NSString *)title {
+    UIBarButtonItem *newBackButton =
+    [[UIBarButtonItem alloc] initWithTitle:title
+                                     style:UIBarButtonItemStyleBordered
+                                    target:nil
+                                    action:nil];
+    [[self navigationItem] setBackBarButtonItem:newBackButton];
+    [self.navigationController pushViewController:viewController animated:animated];
+}
+
+
+
+- (void) startRequest:(BaseService *)service {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 }
 
 - (void) successRequest:(BaseService *)service response:(NSDictionary *)data {
@@ -37,7 +62,7 @@
 }
 
 - (void) finishRequest:(BaseService *)service {
-
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 - (NSArray *) fetchEntity: (NSString *)entityName{

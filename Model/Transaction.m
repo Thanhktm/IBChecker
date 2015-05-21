@@ -120,25 +120,15 @@
     transaction.sourceAcc = [dictionary stringForKey:@"sourceAcc"];
     transaction.info = [dictionary stringForKey:@"info"];
     transaction.benefit = [dictionary stringForKey:@"benefit"];
+    transaction.transType = [dictionary intForKey:@"transType"];
+    transaction.userId = [dictionary intForKey:@"userId"];
+    transaction.approveTime = [dictionary stringForKey:@"approveTime"];
+    
     // Check is detail then no need convert from info1 to type
     transaction.isDetail = NO;
     if (transaction.createBy || [@"" isEqualToString:transaction.createBy]) {
         transaction.isDetail = YES;
         return transaction;
-    }
-    
-    transaction.type = TransactionTypeBatch;
-    if ([@"N" isEqualToString:transaction.info1]) {
-        transaction.type = TransactionTypeInternalTransfer;
-    }
-    if ([@"Y" isEqualToString:transaction.info1]) {
-        transaction.type = TransactionTypeInterBankTransfer;
-    }
-    if ([@"OPEN" isEqualToString:transaction.info1]) {
-        transaction.type = TransactionTypeSaving;
-    }
-    if ([@"SETTELEMENT" isEqualToString:transaction.info1]) {
-        transaction.type = TransactionTypeSettlement;
     }
     return transaction;
 }
