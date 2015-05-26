@@ -14,5 +14,5 @@
 @property (strong, nonatomic) IBOutlet BCTextField *txtPassword;
 @property (strong, nonatomic) IBOutlet UIButton *btnSignIn;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
-
+@property (strong, nonatomic) NSString *key;
 @end

@@ -8,19 +8,18 @@
 
 #import "AuthenViewController.h"
 #import "Utils.h"
+#import "ActiveService.h"
+#import "LoginViewControlelr.h"
 
 @interface AuthenViewController ()
 
 
 @property (weak, nonatomic) IBOutlet UITextField *txtCodeAuthen;
-@property (weak, nonatomic) IBOutlet UIWebView *iuWebView;
 @property (nonatomic, strong) UITapGestureRecognizer  *tapRecognizer;
-
+@property (nonatomic, strong) ActiveService *activeService;
 @end
 
 @implementation AuthenViewController
-@synthesize txtCodeAuthen = _txtCodeAuthen;
-@synthesize iuWebView = _iuWebView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,16 +30,9 @@
     // init  UITextField
     _txtCodeAuthen.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 12, 20)];
     _txtCodeAuthen.leftViewMode = UITextFieldViewModeAlways;
+    _activeService = [[ActiveService alloc] initWithDelegate:self authtoken:nil];
     
-    [self.iuWebView setBackgroundColor:[UIColor clearColor]];
-    [self.iuWebView setOpaque:NO];
-    // AuthenHelp.html
-    NSURL *baseURL = [[NSURL alloc] initFileURLWithPath:@"" isDirectory:YES];
-    NSString *html = [NSString stringWithContentsOfFile:[[NSBundle mainBundle]
-                                                         pathForResource:@"AuthenHelp" ofType:@"html"
-                                                         inDirectory:@""]
-                                               encoding:NSUTF8StringEncoding error:nil];
-    [_iuWebView loadHTMLString:html baseURL:baseURL];
+    
 }
 
 
@@ -72,11 +64,23 @@
 }
 */
 
+#pragma mark - Sevice Response
+-(void)successRequest:(BaseService *)service response:(NSDictionary *)data {
+    if ([_activeService parser:data context:nil]) {
+        LoginViewControlelr *loginViewController = [[LoginViewControlelr alloc] init];
+        loginViewController.key = _key;
+        [self.navigationController pushViewController:loginViewController animated:YES];
+    }
+}
+
+
 - (IBAction)btnAuthentiacte:(id)sender {
-    if ((_txtCodeAuthen.text==NULL)||([_txtCodeAuthen.text isEqualToString:@""])){
+    if ((_txtCodeAuthen.text == nil) || ([_txtCodeAuthen.text isEqualToString:@""])){
         [Utils annoucementWithTitle:nil message:@"Chưa nhập mã kích hoạt, hãy nhập mã kích hoạt để tiếp tục"];
         [_txtCodeAuthen resignFirstResponder];
         return;
     }
+    
+    [_activeService activeWithCode:_txtCodeAuthen.text key:_key];
 }
 @end

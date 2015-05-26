@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface AuthenViewController : UIViewController<UITextFieldDelegate>
-
+@interface AuthenViewController : BaseViewController<UITextFieldDelegate>
+@property(strong, nonatomic) NSString *key;
 - (IBAction)btnAuthentiacte:(id)sender;
 @end

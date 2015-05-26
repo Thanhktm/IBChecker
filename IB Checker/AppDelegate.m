@@ -14,7 +14,7 @@
 #import "MenuTableViewController.h"
 #import "TransactionsViewController.h"
 #import "User.h"
-
+#import "RegisterViewController.h"
 @interface AppDelegate ()
 @property (nonatomic, strong) LoginViewControlelr * loginViewController;
 @property (nonatomic, strong) UILabel *lbTitle;
@@ -36,18 +36,24 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
     
-    NSArray *users = [self fetchEntity:@"User"];
-    if (!_user && [users count] > 0) {
-        
-        _user = [users objectAtIndex:0];
-        if (_user.authtoken) {
-            [self addSlideMenu];
-        } else {
-            [self login];
-        }
-    } else {
-        [self login];
-    }
+//    NSArray *users = [self fetchEntity:@"User"];
+//    if (!_user && [users count] > 0) {
+//        
+//        _user = [users objectAtIndex:0];
+//        if (_user.authtoken) {
+//            [self addSlideMenu];
+//        } else {
+//            [self login];
+//        }
+//    } else {
+//        [self login];
+//    }
+    
+    //register view controller
+    RegisterViewController *registerViewController = [[RegisterViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:registerViewController];
+    self.window.rootViewController = navigationController;
+    
     
     
     [self.window makeKeyAndVisible];

@@ -166,6 +166,8 @@
 		431E8EC41AEA03B000EA644C /* im_la_vn.png in Resources */ = {isa = PBXBuildFile; fileRef = 431E8EC21AEA03B000EA644C /* im_la_vn.png */; };
 		4381BB5C1B00BC7D00F32433 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4381BB5A1B00BC7D00F32433 /* NSString+MD5.m */; };
 		43B1D1991B04516D00C47ED8 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B1D1981B04516D00C47ED8 /* UserInfo.m */; };
+		4B5D7E6A1B145D36007C2EE7 /* RegisterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D7E691B145D36007C2EE7 /* RegisterService.m */; };
+		4BD74ADD1B146522001DB8EF /* ActiveService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD74ADC1B146522001DB8EF /* ActiveService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -420,6 +422,10 @@
 		4381BB5A1B00BC7D00F32433 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		43B1D1971B04516D00C47ED8 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = "Constrant+Utils/UserInfo.h"; sourceTree = "<group>"; };
 		43B1D1981B04516D00C47ED8 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = "Constrant+Utils/UserInfo.m"; sourceTree = "<group>"; };
+		4B5D7E681B145D36007C2EE7 /* RegisterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterService.h; sourceTree = "<group>"; };
+		4B5D7E691B145D36007C2EE7 /* RegisterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterService.m; sourceTree = "<group>"; };
+		4BD74ADB1B146522001DB8EF /* ActiveService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveService.h; sourceTree = "<group>"; };
+		4BD74ADC1B146522001DB8EF /* ActiveService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -590,6 +596,10 @@
 				05E8427A1B0A31B000B196DD /* TransactionApprove.m */,
 				05CBD2E41B0C7FFA009E2459 /* TransactionListService.h */,
 				05CBD2E51B0C7FFA009E2459 /* TransactionListService.m */,
+				4B5D7E681B145D36007C2EE7 /* RegisterService.h */,
+				4B5D7E691B145D36007C2EE7 /* RegisterService.m */,
+				4BD74ADB1B146522001DB8EF /* ActiveService.h */,
+				4BD74ADC1B146522001DB8EF /* ActiveService.m */,
 			);
 			name = Service;
 			path = ../../Service;
@@ -1234,6 +1244,7 @@
 				4312A0AD1AF8702500059EE9 /* LoginConfig.m in Sources */,
 				050B79021B0B93C70092DBB3 /* MenuTableViewController.m in Sources */,
 				431E8E9C1AE9FCE600EA644C /* AFHTTPRequestOperationManager.m in Sources */,
+				4BD74ADD1B146522001DB8EF /* ActiveService.m in Sources */,
 				4312A0A31AF864B600059EE9 /* FMDatabaseAdditions.m in Sources */,
 				431E8E711AE9FC3200EA644C /* RegisterViewController.m in Sources */,
 				431E8EA21AE9FCE600EA644C /* AFURLResponseSerialization.m in Sources */,
@@ -1247,6 +1258,7 @@
 				431E8E5D1AE9FC1C00EA644C /* LoginController.m in Sources */,
 				431E8E5B1AE9FC1C00EA644C /* LoginAuthController.m in Sources */,
 				4312A0A51AF864B600059EE9 /* FMDatabaseQueue.m in Sources */,
+				4B5D7E6A1B145D36007C2EE7 /* RegisterService.m in Sources */,
 				431E8E0A1AE9F85700EA644C /* main.m in Sources */,
 				431E8E6F1AE9FC3200EA644C /* HelpViewController.m in Sources */,
 			);

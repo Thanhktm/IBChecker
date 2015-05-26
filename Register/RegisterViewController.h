@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface RegisterViewController : UIViewController<UITextFieldDelegate>
+@interface RegisterViewController : BaseViewController<UITextFieldDelegate>
 
 
 - (IBAction)btnRegisterClick:(id)sender;
