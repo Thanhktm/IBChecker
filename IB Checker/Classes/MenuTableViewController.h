@@ -16,6 +16,8 @@
 @class User;
 @interface MenuTableViewController : UITableViewController <SlideNavigationControllerDelegate>
 @property (nonatomic, strong) User * user;
+@property (strong, nonatomic) BaseViewController * approveViewController;
+@property (strong, nonatomic) BaseViewController * historyViewController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 

@@ -35,13 +35,13 @@
                         <action selector="btnSignClicked:" destination="-1" eventType="touchUpInside" id="ccP-gq-4nF"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tên đăng nhập" minimumFontSize="17" background="bg_textlogin.png" id="ssj-cm-lh3" customClass="BCTextField">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tên đăng nhập" minimumFontSize="17" background="bg_textlogin.png" id="ssj-cm-lh3" customClass="LoginTextField">
                     <rect key="frame" x="20" y="198" width="280" height="30"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mật khẩu" minimumFontSize="17" background="bg_password.png" id="US5-Z6-HKt" customClass="BCTextField">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mật khẩu" minimumFontSize="17" background="bg_password.png" id="US5-Z6-HKt" customClass="LoginTextField">
                     <rect key="frame" x="20" y="236" width="280" height="30"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -59,7 +59,7 @@
     <resources>
         <image name="bg_password.png" width="559" height="60"/>
         <image name="bg_textlogin.png" width="2323" height="173"/>
-        <image name="bg_wating.png" width="960" height="1706"/>
+        <image name="bg_wating.png" width="320" height="569"/>
         <image name="login_btn_press.png" width="559" height="75"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

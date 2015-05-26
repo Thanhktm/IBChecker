@@ -21,7 +21,7 @@ typedef enum {
     TransactionSuccess
 }TransactionStatus;
 
-@interface Transaction : Item
+@interface Transaction : Item <NSCopying>
 @property (nonatomic, strong) NSString * tranSn;
 @property (nonatomic, retain) NSString * info1;
 @property (nonatomic, retain) NSString * info2;

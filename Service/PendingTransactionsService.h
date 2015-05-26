@@ -9,5 +9,7 @@
 #import "BaseService.h"
 @interface PendingTransactionsService : BaseService
 @property (nonatomic, strong) NSMutableArray * accounts;
+@property (nonatomic, strong) NSMutableArray * accountsBase;
+@property (nonatomic, strong) NSMutableArray * accountsSearch;
 - (void)getTransactionsPage:(int)page;
 @end

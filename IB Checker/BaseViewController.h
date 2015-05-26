@@ -11,10 +11,15 @@
 #import "Item.h"
 #import <CoreData/CoreData.h>
 
-@interface BaseViewController : UIViewController <ServiceDelegate>
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@class User;
 
+@interface BaseViewController : UIViewController <ServiceDelegate>
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+@property (nonatomic, strong) User * user;
+
 
 - (NSArray *) fetchEntity: (NSString *)entityName;
 - (void) pushViewController:(UIViewController *)viewController animated:(BOOL)animated title:(NSString *)title;

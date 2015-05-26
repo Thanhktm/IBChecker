@@ -8,7 +8,7 @@
 
 #import "Item.h"
 
-@interface Account : Item
+@interface Account : Item <NSCopying>
 @property (nonatomic, retain) NSString * sourceAccout;
 @property (nonatomic) double availbleBalance;
 @property (nonatomic, retain) NSString * currencyCode;

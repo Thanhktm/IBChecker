@@ -68,57 +68,63 @@
 }
 
 - (void)addSlideMenu {
-//    if (![SlideNavigationController sharedInstance].leftMenu) {
     
-        TransactionsViewController  *approveViewController = [[TransactionsViewController alloc] init];
-        approveViewController.user = _user;
-        
-        SlideNavigationController *nav = [[SlideNavigationController alloc] initWithRootViewController:approveViewController];
-        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bg_navigation.png"] forBarMetrics:UIBarMetricsDefault];
-
-        NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:                                                   [UIColor whiteColor],NSForegroundColorAttributeName, nil];
-        
-        [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
+    NSArray *users = [self fetchEntity:@"User"];
+    if (!_user && [users count] > 0) {
+        _user = [users objectAtIndex:0];
+    }
+    MenuTableViewController *menuViewControlelr = [[MenuTableViewController alloc] init];
+    menuViewControlelr.managedObjectContext = self.managedObjectContext;
     
-        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-        
-        MenuTableViewController *menuViewControlelr = [[MenuTableViewController alloc] init];
-        menuViewControlelr.managedObjectContext = self.managedObjectContext;
-        [SlideNavigationController sharedInstance].leftMenu = menuViewControlelr;
-        [SlideNavigationController sharedInstance].menuRevealAnimationDuration = .18;
-        
-        // Creating a custom bar button for right menu
-        UIButton *button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 22, 19)];
-        [button setBackgroundImage:[UIImage imageNamed:@"ic_menu_toge"] forState:UIControlStateNormal];
-        [button addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu) forControlEvents:UIControlEventTouchUpInside];
-        
-        _lbTitle = [[UILabel alloc] initWithFrame:CGRectMake(30, 0, 160, 19)];
-        _lbTitle.font = [UIFont systemFontOfSize:19];
-        [_lbTitle setTextColor:[UIColor whiteColor]];
-        
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 190, 19)];
-        
-        [view addSubview:_lbTitle];
-        [view addSubview:button];
-        
-        UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
-        [SlideNavigationController sharedInstance].leftBarButtonItem = leftBarButtonItem;
-        
-        [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidClose object:nil queue:nil usingBlock:^(NSNotification *note) {
-            NSString *menu = note.userInfo[@"menu"];
-            NSLog(@"Closed %@", menu);
-        }];
-        
-        [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidOpen object:nil queue:nil usingBlock:^(NSNotification *note) {
-            NSString *menu = note.userInfo[@"menu"];
-            NSLog(@"Opened %@", menu);
-        }];
-        
-        [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidReveal object:nil queue:nil usingBlock:^(NSNotification *note) {
-            NSString *menu = note.userInfo[@"menu"];
-            NSLog(@"Revealed %@", menu);
-        }];
-//    }
+    TransactionsViewController  *approveViewController = [[TransactionsViewController alloc] init];
+    approveViewController.user = _user;
+    
+    
+    SlideNavigationController *nav = [[SlideNavigationController alloc] initWithRootViewController:approveViewController];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bg_navigation.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:                                                   [UIColor whiteColor],NSForegroundColorAttributeName, nil];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    
+    [SlideNavigationController sharedInstance].leftMenu = menuViewControlelr;
+    [SlideNavigationController sharedInstance].menuRevealAnimationDuration = .18;
+    
+    // Creating a custom bar button for right menu
+    UIButton *button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 62, 23)];
+    [button setImageEdgeInsets:UIEdgeInsetsMake(0, 10, 4, 30)];
+    [button setImage:[UIImage imageNamed:@"ic_menu_toge"] forState:UIControlStateNormal];
+    [button addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu) forControlEvents:UIControlEventTouchUpInside];
+    
+    _lbTitle = [[UILabel alloc] initWithFrame:CGRectMake(40, 0, 160, 19)];
+    _lbTitle.font = [UIFont systemFontOfSize:19];
+    [_lbTitle setTextColor:[UIColor whiteColor]];
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 190, 19)];
+    
+    [view addSubview:_lbTitle];
+    [view addSubview:button];
+    view.bounds = CGRectOffset(view.frame, 10, 0);
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
+    [SlideNavigationController sharedInstance].leftBarButtonItem = leftBarButtonItem;
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidClose object:nil queue:nil usingBlock:^(NSNotification *note) {
+        NSString *menu = note.userInfo[@"menu"];
+        NSLog(@"Closed %@", menu);
+    }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidOpen object:nil queue:nil usingBlock:^(NSNotification *note) {
+        NSString *menu = note.userInfo[@"menu"];
+        NSLog(@"Opened %@", menu);
+    }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidReveal object:nil queue:nil usingBlock:^(NSNotification *note) {
+        NSString *menu = note.userInfo[@"menu"];
+        NSLog(@"Revealed %@", menu);
+    }];
    
     
     self.window.rootViewController = [SlideNavigationController sharedInstance];

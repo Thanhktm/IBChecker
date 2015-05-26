@@ -46,6 +46,8 @@
 		05D8F8C31B00BABE00F70FC7 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8F8C21B00BABE00F70FC7 /* BaseTableViewController.m */; };
 		05D8F8C81B00BC4500F70FC7 /* TransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8F8C61B00BC4500F70FC7 /* TransactionsViewController.m */; };
 		05D8F8C91B00BC4500F70FC7 /* TransactionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D8F8C71B00BC4500F70FC7 /* TransactionsViewController.xib */; };
+		05DA00041B1339D7007769EC /* TransactionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DA00021B1339D7007769EC /* TransactionDetailViewController.m */; };
+		05DA00051B1339D7007769EC /* TransactionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DA00031B1339D7007769EC /* TransactionDetailViewController.xib */; };
 		05DA0AE81B075A060013365B /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DA0AE71B075A060013365B /* TransactionTableViewCell.xib */; };
 		05DA0AEA1B075B990013365B /* HeaderSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DA0AE91B075B990013365B /* HeaderSectionView.xib */; };
 		05DA0AED1B078F760013365B /* Benefit.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DA0AEC1B078F760013365B /* Benefit.m */; };
@@ -55,6 +57,9 @@
 		05E0DDC41B0CDE52008EDA06 /* bg_wating@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E0DDBF1B0CDE52008EDA06 /* bg_wating@2x.png */; };
 		05E0DDC51B0CDE52008EDA06 /* bg_wating@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E0DDC01B0CDE52008EDA06 /* bg_wating@3x.png */; };
 		05E0DDC71B0CE48B008EDA06 /* bg_navigation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E0DDC61B0CE48B008EDA06 /* bg_navigation@2x.png */; };
+		05E211E71B13E27100B395CB /* LoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E211E61B13E27100B395CB /* LoginTextField.m */; };
+		05E2B3E61B137269007C1B17 /* DetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E2B3E41B137269007C1B17 /* DetailTableViewCell.m */; };
+		05E2B3E71B137269007C1B17 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E2B3E51B137269007C1B17 /* DetailTableViewCell.xib */; };
 		05E384781B06B342006FF578 /* bg_span.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E384771B06B342006FF578 /* bg_span.png */; };
 		05E3847A1B06B633006FF578 /* bg_section.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E384791B06B633006FF578 /* bg_section.png */; };
 		05E3847E1B06C0AF006FF578 /* uncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E3847C1B06C0AF006FF578 /* uncheck.png */; };
@@ -240,6 +245,9 @@
 		05D8F8C51B00BC4500F70FC7 /* TransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsViewController.h; sourceTree = "<group>"; };
 		05D8F8C61B00BC4500F70FC7 /* TransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsViewController.m; sourceTree = "<group>"; };
 		05D8F8C71B00BC4500F70FC7 /* TransactionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionsViewController.xib; sourceTree = "<group>"; };
+		05DA00011B1339D7007769EC /* TransactionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionDetailViewController.h; sourceTree = "<group>"; };
+		05DA00021B1339D7007769EC /* TransactionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionDetailViewController.m; sourceTree = "<group>"; };
+		05DA00031B1339D7007769EC /* TransactionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionDetailViewController.xib; sourceTree = "<group>"; };
 		05DA0AE71B075A060013365B /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		05DA0AE91B075B990013365B /* HeaderSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderSectionView.xib; sourceTree = "<group>"; };
 		05DA0AEB1B078F760013365B /* Benefit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Benefit.h; sourceTree = "<group>"; };
@@ -250,6 +258,11 @@
 		05E0DDBF1B0CDE52008EDA06 /* bg_wating@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg_wating@2x.png"; path = "Resources/Background/bg_wating@2x.png"; sourceTree = "<group>"; };
 		05E0DDC01B0CDE52008EDA06 /* bg_wating@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg_wating@3x.png"; path = "Resources/Background/bg_wating@3x.png"; sourceTree = "<group>"; };
 		05E0DDC61B0CE48B008EDA06 /* bg_navigation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_navigation@2x.png"; sourceTree = "<group>"; };
+		05E211E51B13E27100B395CB /* LoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTextField.h; sourceTree = "<group>"; };
+		05E211E61B13E27100B395CB /* LoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTextField.m; sourceTree = "<group>"; };
+		05E2B3E31B137269007C1B17 /* DetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
+		05E2B3E41B137269007C1B17 /* DetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewCell.m; sourceTree = "<group>"; };
+		05E2B3E51B137269007C1B17 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
 		05E384771B06B342006FF578 /* bg_span.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_span.png; sourceTree = "<group>"; };
 		05E384791B06B633006FF578 /* bg_section.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_section.png; sourceTree = "<group>"; };
 		05E3847C1B06C0AF006FF578 /* uncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uncheck.png; sourceTree = "<group>"; };
@@ -618,6 +631,12 @@
 				05F834B61B0ACC7500594A73 /* TransactionResultHeaderView.h */,
 				05F834B71B0ACC7500594A73 /* TransactionResultHeaderView.m */,
 				05F834B81B0ACC7500594A73 /* TransactionResultHeaderView.xib */,
+				05DA00011B1339D7007769EC /* TransactionDetailViewController.h */,
+				05DA00021B1339D7007769EC /* TransactionDetailViewController.m */,
+				05DA00031B1339D7007769EC /* TransactionDetailViewController.xib */,
+				05E2B3E31B137269007C1B17 /* DetailTableViewCell.h */,
+				05E2B3E41B137269007C1B17 /* DetailTableViewCell.m */,
+				05E2B3E51B137269007C1B17 /* DetailTableViewCell.xib */,
 			);
 			name = Transaction;
 			path = ../../Transaction;
@@ -838,6 +857,8 @@
 				05F834C71B0B346900594A73 /* LoginViewControlelr.h */,
 				05F834C81B0B346900594A73 /* LoginViewControlelr.m */,
 				05F834C91B0B346900594A73 /* LoginViewControlelr.xib */,
+				05E211E51B13E27100B395CB /* LoginTextField.h */,
+				05E211E61B13E27100B395CB /* LoginTextField.m */,
 			);
 			name = Login;
 			path = ../..;
@@ -1052,6 +1073,7 @@
 				TargetAttributes = {
 					431E8E031AE9F85700EA644C = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = JKTJSGZ67N;
 					};
 					431E8E1C1AE9F85800EA644C = {
 						CreatedOnToolsVersion = 6.2;
@@ -1124,7 +1146,9 @@
 				05E384781B06B342006FF578 /* bg_span.png in Resources */,
 				05E94EE11B0C097500316710 /* ic_menu_rating_money.png in Resources */,
 				05E0DDC71B0CE48B008EDA06 /* bg_navigation@2x.png in Resources */,
+				05DA00051B1339D7007769EC /* TransactionDetailViewController.xib in Resources */,
 				05CBD2E31B0C7A05009E2459 /* bg_segment_selected@2x.png in Resources */,
+				05E2B3E71B137269007C1B17 /* DetailTableViewCell.xib in Resources */,
 				05E0DDC41B0CDE52008EDA06 /* bg_wating@2x.png in Resources */,
 				431E8E3E1AE9FBA100EA644C /* bn_duongke.png in Resources */,
 				431E8E491AE9FBAC00EA644C /* bg_textlogin.png in Resources */,
@@ -1182,6 +1206,7 @@
 				431E8E9E1AE9FCE600EA644C /* AFNetworkReachabilityManager.m in Sources */,
 				050B78F91B0B8BC60092DBB3 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				431E8EB61AE9FD0F00EA644C /* Utils.m in Sources */,
+				05E211E71B13E27100B395CB /* LoginTextField.m in Sources */,
 				05F834C61B0B311F00594A73 /* BCTextField.m in Sources */,
 				4312A0A91AF8669200059EE9 /* DataBaseHelper.m in Sources */,
 				431E8E6C1AE9FC3200EA644C /* AuthenViewController.m in Sources */,
@@ -1206,6 +1231,7 @@
 				05DA0AED1B078F760013365B /* Benefit.m in Sources */,
 				05F834B91B0ACC7500594A73 /* TransactionResultHeaderView.m in Sources */,
 				431E8EA61AE9FCE600EA644C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				05DA00041B1339D7007769EC /* TransactionDetailViewController.m in Sources */,
 				431E8E9B1AE9FCE600EA644C /* AFHTTPRequestOperation.m in Sources */,
 				431E8EB51AE9FD0F00EA644C /* Constant.m in Sources */,
 				05CBD2D91B0C7127009E2459 /* HistoryTableViewCell.m in Sources */,
@@ -1244,6 +1270,7 @@
 				050B78FD1B0B8BC60092DBB3 /* SlideNavigationController.m in Sources */,
 				050B78F81B0B8BC60092DBB3 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				05D8F8C31B00BABE00F70FC7 /* BaseTableViewController.m in Sources */,
+				05E2B3E61B137269007C1B17 /* DetailTableViewCell.m in Sources */,
 				431E8E5D1AE9FC1C00EA644C /* LoginController.m in Sources */,
 				431E8E5B1AE9FC1C00EA644C /* LoginAuthController.m in Sources */,
 				4312A0A51AF864B600059EE9 /* FMDatabaseQueue.m in Sources */,
@@ -1300,7 +1327,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tran Khac Hieu (JKTJSGZ67N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tran Khac Hieu (JKTJSGZ67N)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1319,6 +1347,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				New_Setting = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -1341,7 +1370,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tran Khac Hieu (JKTJSGZ67N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tran Khac Hieu (JKTJSGZ67N)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1354,6 +1384,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				New_Setting = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1363,6 +1394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "IB Checker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1374,6 +1406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tran Khac Hieu (JKTJSGZ67N)";
 				INFOPLIST_FILE = "IB Checker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

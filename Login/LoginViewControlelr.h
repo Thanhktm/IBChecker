@@ -8,10 +8,10 @@
 
 #import "BaseViewController.h"
 
-@class BCTextField;
+@class LoginTextField;
 @interface LoginViewControlelr : BaseViewController <UITextFieldDelegate>
-@property (strong, nonatomic) IBOutlet BCTextField *txtLogin;
-@property (strong, nonatomic) IBOutlet BCTextField *txtPassword;
+@property (strong, nonatomic) IBOutlet LoginTextField *txtLogin;
+@property (strong, nonatomic) IBOutlet LoginTextField *txtPassword;
 @property (strong, nonatomic) IBOutlet UIButton *btnSignIn;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 

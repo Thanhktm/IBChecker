@@ -9,6 +9,25 @@
 #import "Benefit.h"
 
 @implementation Benefit
+
+- (id)copyWithZone:(NSZone *)zone {
+    id copy = [[[self class] alloc] init];
+    
+    if (copy) {
+        // Copy NSObject subclasses
+        [copy setBank:[self.bank copyWithZone:zone]];
+        [copy setAccountNo:[self.accountNo copyWithZone:zone]];
+        [copy setName:[self.name copyWithZone:zone]];
+        [copy setCurrencyCode:[self.currencyCode copyWithZone:zone]];
+                
+        // Set primitives
+        [copy setAmount:self.amount];
+
+    }
+    
+    return copy;
+}
+
 + (id)objectFromDictionary:(NSDictionary *)dictionary context:(NSManagedObjectContext *)context
 {
     Benefit *benifit = [[Benefit alloc] init];

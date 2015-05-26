@@ -24,7 +24,7 @@
 
 //here 40 - is your x offset
 - (CGRect)rectForBounds:(CGRect)bounds {
-    return CGRectInset(bounds, 40, 0);
+    return CGRectInset(bounds, 10, 0);
 }
 
 @end

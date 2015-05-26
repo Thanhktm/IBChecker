@@ -27,11 +27,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbName;
 @property (strong, nonatomic) IBOutlet UILabel *lbCif;
 @property (strong, nonatomic) IBOutlet UIButton *btnLock;
+@property (strong, nonatomic) NSMutableArray * controlers;
 
 
 @end
 
 @implementation MenuTableViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,6 +44,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
      NSArray *arrayUser = [self fetchEntity:@"User"];
     if ([arrayUser count] > 0) {
         _user  = [arrayUser objectAtIndex:0];
@@ -165,23 +169,29 @@
     switch (indexPath.row) {
         case 0:
         {
-            TransactionsViewController *approveViewController = [[TransactionsViewController alloc] init];
-            approveViewController.user = _user;
-            nv = approveViewController;
+            if (!_approveViewController) {
+                _approveViewController = [[TransactionsViewController alloc] init];
+            }
+            _approveViewController.user = _user;
+            nv = _approveViewController;
         }
             break;
         case 1:
         {
-            HistoryViewController *historyViewController = [[HistoryViewController alloc] init];
-            historyViewController.user = _user;
-            nv = historyViewController;
+            if (!_historyViewController) {
+                _historyViewController = [[HistoryViewController alloc] init];
+            }
+            _historyViewController.user = _user;
+            nv = _historyViewController;
         }
             break;
         default:
         {
-            HistoryViewController *historyViewController = [[HistoryViewController alloc] init];
-            historyViewController.user = _user;
-            nv = historyViewController;
+            if (!_historyViewController) {
+                _historyViewController = [[HistoryViewController alloc] init];
+            }
+            _historyViewController.user = _user;
+            nv = _historyViewController;
         }
             break;
     }

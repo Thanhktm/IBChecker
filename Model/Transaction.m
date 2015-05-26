@@ -14,6 +14,47 @@
 //@dynamic info2;
 //@dynamic amount;
 
+- (id)copyWithZone:(NSZone *)zone {
+    id copy = [[[self class] alloc] init];
+    
+    if (copy) {
+        // Copy NSObject subclasses
+        [copy setTranSn:[self.tranSn copyWithZone:zone]];
+        [copy setInfo1:[self.info1 copyWithZone:zone]];
+        [copy setInfo2:[self.info2 copyWithZone:zone]];
+        
+        [copy setCurrencyCode:[self.currencyCode copyWithZone:zone]];
+        [copy setCreateBy:[self.createBy copyWithZone:zone]];
+        [copy setCreateTime:[self.createTime copyWithZone:zone]];
+        [copy setInterestAccount:[self.interestAccount copyWithZone:zone]];
+        [copy setTerm:[self.term copyWithZone:zone]];
+        [copy setMessage:[self.message copyWithZone:zone]];
+        [copy setInfo:[self.info copyWithZone:zone]];
+        [copy setSourceAcc:[self.sourceAcc copyWithZone:zone]];
+        [copy setApproveTime:[self.approveTime copyWithZone:zone]];
+        [copy setSearchContent:[self.searchContent copyWithZone:zone]];
+        
+        [copy setBenefits:[[NSArray alloc] initWithArray:self.benefits copyItems:YES]];
+        
+        // Set primitives
+        [copy setAmount:self.amount];
+        [copy setInterestAmount:self.interestAmount];
+        [copy setInterestRate:self.interestRate];
+        [copy setType:self.type];
+        [copy setTransType:self.transType];
+        [copy setUserId:self.userId];
+        [copy setStatus:self.status];
+        [copy setChecked:self.checked];
+        [copy setExpand:self.expand];
+        [copy setIsDetail:self.isDetail];
+        [copy setIsShowTitle:self.isShowTitle];
+        
+        
+    }
+    
+    return copy;
+}
+
 + (Transaction *) create: (NSManagedObjectContext *) context {
     return [NSEntityDescription insertNewObjectForEntityForName:@"Transaction" inManagedObjectContext:context];
 }
@@ -76,6 +117,7 @@
             _info1 = transactionNew.info1;
             _info2 = transactionNew.info2;
             _amount = transactionNew.amount;
+            _searchContent = transactionNew.searchContent;
             _isDetail = NO;
             _expand = NO;
         } else {
@@ -123,6 +165,39 @@
     transaction.transType = [dictionary intForKey:@"transType"];
     transaction.userId = [dictionary intForKey:@"userId"];
     transaction.approveTime = [dictionary stringForKey:@"approveTime"];
+    NSString *lbInfo2 = transaction.info2;
+    NSString *lbInfo1 = @"";
+    NSString *lbTitle = @"";
+    
+    switch (transaction.type) {
+        case TransactionTypeInternalTransfer:
+            lbInfo1 = NSLocalizedString(@"Internal tranfer", @"");
+            lbTitle = NSLocalizedString(@"Transfers", @"");
+            break;
+        case TransactionTypeInterBankTransfer:
+            lbInfo1 = NSLocalizedString(@"Inter-bank tranfer", @"");
+            lbTitle = NSLocalizedString(@"Transfers", @"");
+            break;
+        case TransactionTypeBatch:
+            lbInfo1 = transaction.info1;
+            lbInfo2 = [NSString stringWithFormat:@"%@ %@", transaction.info2, NSLocalizedString(@"Items", @"")];
+            lbTitle = NSLocalizedString(@"Batchs", @"");
+            break;
+        case TransactionTypeSaving:
+            lbInfo1 = NSLocalizedString(@"Open saving account", @"");
+            lbTitle = NSLocalizedString(@"Others", @"");
+            break;
+        case TransactionTypeSettlement:
+            lbInfo1 = NSLocalizedString(@"Settlement", @"");
+            lbTitle = NSLocalizedString(@"Others", @"");
+            break;
+            
+        default:
+            break;
+    }
+
+    
+    transaction.searchContent = [[NSString stringWithFormat:@"%@ %@ %@ %@",lbInfo1, lbInfo2, lbTitle, [Transaction formatNumber:transaction.amount]] lowercaseString];
     
     // Check is detail then no need convert from info1 to type
     transaction.isDetail = NO;

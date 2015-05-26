@@ -238,11 +238,11 @@
 }
 
 
-- (void)cellWithData:(Transaction *) trasaction {
-    _transaction = trasaction;
+- (void)cellWithData:(Transaction *) transaction {
+    _transaction = transaction;
 
-    _lbInfo2.text = trasaction.info2;
-    switch (trasaction.type) {
+    _lbInfo2.text = transaction.info2;
+    switch (transaction.type) {
         case TransactionTypeInternalTransfer:
             _lbInfo1.text = NSLocalizedString(@"Internal tranfer", @"");
             _lbTitle.text = NSLocalizedString(@"Transfers", @"");
@@ -252,8 +252,8 @@
             _lbTitle.text = NSLocalizedString(@"Transfers", @"");
             break;
         case TransactionTypeBatch:
-            _lbInfo1.text = trasaction.info1;
-            _lbInfo2.text = [NSString stringWithFormat:@"%@ %@", trasaction.info2, NSLocalizedString(@"Items", @"")];
+            _lbInfo1.text = transaction.info1;
+            _lbInfo2.text = [NSString stringWithFormat:@"%@ %@", transaction.info2, NSLocalizedString(@"Items", @"")];
             _lbTitle.text = NSLocalizedString(@"Batchs", @"");
             break;
         case TransactionTypeSaving:
@@ -269,11 +269,10 @@
             break;
     }
 
-    _btnCheck.selected = trasaction.checked;
-    _btnExpand.selected = trasaction.expand;
-    _lbAmount.text = [Transaction formatNumber:trasaction.amount];
-    _lbCurrency.text = trasaction.currencyCode;
-    _transaction.searchContent = [NSString stringWithFormat:@"%@ %@ %@ %@",_lbInfo1.text, _lbInfo2.text, _lbTitle.text, _lbAmount.text];
+    _btnCheck.selected = transaction.checked;
+    _btnExpand.selected = transaction.expand;
+    _lbAmount.text = [Transaction formatNumber:transaction.amount];
+    _lbCurrency.text = transaction.currencyCode;
     
     [self setNeedsDisplay];
 }

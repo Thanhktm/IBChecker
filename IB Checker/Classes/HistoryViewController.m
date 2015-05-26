@@ -32,11 +32,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    _listAllService = [[TransactionListService alloc] initWithDelegate:self authtoken:_user.authtoken];
+    _listAllService = [[TransactionListService alloc] initWithDelegate:self authtoken:self.user.authtoken];
     
-    _listFailService = [[TransactionListService alloc] initWithDelegate:self authtoken:_user.authtoken];
+    _listFailService = [[TransactionListService alloc] initWithDelegate:self authtoken:self.user.authtoken];
     
-    _listSuccessService = [[TransactionListService alloc] initWithDelegate:self authtoken:_user.authtoken];
+    _listSuccessService = [[TransactionListService alloc] initWithDelegate:self authtoken:self.user.authtoken];
     
     _pageAll = 1;
     _pageFail = 1;
@@ -48,6 +48,7 @@
     
     [_listAllService getListAllPage:_pageAll];
     _tableView.tableHeaderView = _headerView;
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
 }
 
@@ -70,13 +71,16 @@
 - (void)refresh:(UIRefreshControl *)refreshControl {
     switch (_segment.selectedSegmentIndex) {
         case 0:
-                [_listAllService getListAllPage:_pageAll];
+            _pageAll++;
+            [_listAllService getListAllPage:_pageAll];
             break;
         case 1:
-                [_listSuccessService getListSuccessPage:_pageSuccess];
+            _pageSuccess++;
+           [_listSuccessService getListSuccessPage:_pageSuccess];
             break;
         case 2:
-                [_listFailService getListFailPage:_pageFail];
+            _pageFail++;
+            [_listFailService getListFailPage:_pageFail];
             break;
         default:
             break;

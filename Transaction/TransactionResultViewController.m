@@ -9,6 +9,8 @@
 #import "TransactionResultViewController.h"
 #import "TransactionResultCell.h"
 #import "TransactionResultHeaderView.h"
+#import "TransactionDetailViewController.h"
+
 
 @interface TransactionResultViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -20,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -84,6 +87,7 @@
     return header;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TransactionResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (cell == nil) {
@@ -107,4 +111,20 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Transaction *transaction = nil;
+    if ([_listFaild count] > 0 && indexPath.section == 0) {
+        transaction = [_listFaild objectAtIndex:indexPath.row];
+    }
+    
+    if ((indexPath.section == 0 && [_listFaild count] == 0) || indexPath.section == 1) {
+        transaction = [_listSucc objectAtIndex:indexPath.row];
+    }
+    
+    TransactionDetailViewController *detailViewController = [[TransactionDetailViewController alloc] init];
+    detailViewController.transaction = transaction;
+    detailViewController.user = self.user;
+    [self pushViewController:detailViewController animated:YES title:NSLocalizedString(@"Details", @"")];
+}
 @end

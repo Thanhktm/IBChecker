@@ -8,7 +8,7 @@
 
 #import "Item.h"
 
-@interface Benefit : Item
+@interface Benefit : Item <NSCopying>
 
 @property (nonatomic, retain) NSString * accountNo;
 @property (nonatomic, retain) NSString * name;

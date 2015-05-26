@@ -11,9 +11,7 @@
 #import "TransactionTableViewCell.h"
 #import "SlideNavigationController.h"
 
-@class User;
 @interface TransactionsViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource,
-TransactionCellDelegate, TransactionHeaderDelegate, UISearchResultsUpdating, UISearchBarDelegate, UITextFieldDelegate>
-@property (strong) User *user;
+TransactionCellDelegate, TransactionHeaderDelegate, UISearchResultsUpdating, UISearchBarDelegate, UITextFieldDelegate, UIActionSheetDelegate>
 @property (nonatomic, strong) UISearchController *searchController;
 @end

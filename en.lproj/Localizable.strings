@@ -58,4 +58,11 @@
 
 "Success status" = "Trạng thái: Giao dịch thành công";
 "Fail status" = "Trạng thái: Giao dịch thất bại";
+
+"Accept" = "Đồng ý";
+"Cancel" = "Hủy";
+
+"Details" = "Chi tiết GD";
+"Detail status success" = "Giao dịch thành công";
+"Detail status fail" = "Giao dịch thât bại";
 //Thanhnd end

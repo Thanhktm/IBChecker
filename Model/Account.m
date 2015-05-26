@@ -17,6 +17,25 @@
 //@dynamic batchs;
 //@dynamic others;
 
+- (id)copyWithZone:(NSZone *)zone {
+    id copy = [[[self class] alloc] init];
+    
+    if (copy) {
+        // Copy NSObject subclasses
+        [copy setSourceAccout:[self.sourceAccout copyWithZone:zone]];
+        [copy setCurrencyCode:[self.currencyCode copyWithZone:zone]];
+        [copy setTransfers:[[NSMutableArray alloc] initWithArray:self.transfers copyItems:YES]];
+        [copy setBatchs:[[NSMutableArray alloc] initWithArray:self.batchs copyItems:YES]];
+        [copy setOthers:[[NSMutableArray alloc] initWithArray:self.others copyItems:YES]];
+        // Set primitives
+        [copy setAvailbleBalance:self.availbleBalance];
+        [copy setChecked:self.checked];
+        [copy setAvailable:self.available];
+    }
+    
+    return copy;
+}
+
 + (Account *)create: (NSManagedObjectContext *) context {
     return [NSEntityDescription insertNewObjectForEntityForName:@"Account" inManagedObjectContext:context];
 }
