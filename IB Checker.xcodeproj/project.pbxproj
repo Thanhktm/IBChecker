@@ -166,6 +166,20 @@
 		431E8EC41AEA03B000EA644C /* im_la_vn.png in Resources */ = {isa = PBXBuildFile; fileRef = 431E8EC21AEA03B000EA644C /* im_la_vn.png */; };
 		4381BB5C1B00BC7D00F32433 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4381BB5A1B00BC7D00F32433 /* NSString+MD5.m */; };
 		43B1D1991B04516D00C47ED8 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B1D1981B04516D00C47ED8 /* UserInfo.m */; };
+		4B5D7E4A1B14287E007C2EE7 /* ExchangeRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D7E481B14287E007C2EE7 /* ExchangeRateViewController.m */; };
+		4B5D7E4B1B14287E007C2EE7 /* ExchangeRateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E491B14287E007C2EE7 /* ExchangeRateViewController.xib */; };
+		4B5D7E4F1B1428C1007C2EE7 /* ExchageRateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D7E4D1B1428C1007C2EE7 /* ExchageRateTableViewCell.m */; };
+		4B5D7E501B1428C1007C2EE7 /* ExchageRateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E4E1B1428C1007C2EE7 /* ExchageRateTableViewCell.xib */; };
+		4B5D7E541B1428F0007C2EE7 /* SectionOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D7E521B1428F0007C2EE7 /* SectionOneTableViewCell.m */; };
+		4B5D7E551B1428F0007C2EE7 /* SectionOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E531B1428F0007C2EE7 /* SectionOneTableViewCell.xib */; };
+		4B5D7E591B142901007C2EE7 /* SectionTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D7E571B142901007C2EE7 /* SectionTwoTableViewCell.m */; };
+		4B5D7E5A1B142901007C2EE7 /* SectionTwoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E581B142901007C2EE7 /* SectionTwoTableViewCell.xib */; };
+		4B5D7E5D1B142C99007C2EE7 /* chuyendoi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E5C1B142C99007C2EE7 /* chuyendoi@2x.png */; };
+		4B5D7E5F1B142DAC007C2EE7 /* chuyendoi.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E5E1B142DAC007C2EE7 /* chuyendoi.png */; };
+		4B5D7E621B142FE5007C2EE7 /* us@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E601B142FE5007C2EE7 /* us@2x.png */; };
+		4B5D7E631B142FE5007C2EE7 /* vn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E611B142FE5007C2EE7 /* vn@2x.png */; };
+		4B5D7E661B14302F007C2EE7 /* us.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E641B14302F007C2EE7 /* us.png */; };
+		4B5D7E671B14302F007C2EE7 /* vn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E651B14302F007C2EE7 /* vn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -420,6 +434,24 @@
 		4381BB5A1B00BC7D00F32433 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		43B1D1971B04516D00C47ED8 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = "Constrant+Utils/UserInfo.h"; sourceTree = "<group>"; };
 		43B1D1981B04516D00C47ED8 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = "Constrant+Utils/UserInfo.m"; sourceTree = "<group>"; };
+		4B5D7E471B14287E007C2EE7 /* ExchangeRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeRateViewController.h; sourceTree = "<group>"; };
+		4B5D7E481B14287E007C2EE7 /* ExchangeRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeRateViewController.m; sourceTree = "<group>"; };
+		4B5D7E491B14287E007C2EE7 /* ExchangeRateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeRateViewController.xib; sourceTree = "<group>"; };
+		4B5D7E4C1B1428C1007C2EE7 /* ExchageRateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchageRateTableViewCell.h; sourceTree = "<group>"; };
+		4B5D7E4D1B1428C1007C2EE7 /* ExchageRateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchageRateTableViewCell.m; sourceTree = "<group>"; };
+		4B5D7E4E1B1428C1007C2EE7 /* ExchageRateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchageRateTableViewCell.xib; sourceTree = "<group>"; };
+		4B5D7E511B1428F0007C2EE7 /* SectionOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionOneTableViewCell.h; sourceTree = "<group>"; };
+		4B5D7E521B1428F0007C2EE7 /* SectionOneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionOneTableViewCell.m; sourceTree = "<group>"; };
+		4B5D7E531B1428F0007C2EE7 /* SectionOneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionOneTableViewCell.xib; sourceTree = "<group>"; };
+		4B5D7E561B142901007C2EE7 /* SectionTwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionTwoTableViewCell.h; sourceTree = "<group>"; };
+		4B5D7E571B142901007C2EE7 /* SectionTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionTwoTableViewCell.m; sourceTree = "<group>"; };
+		4B5D7E581B142901007C2EE7 /* SectionTwoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionTwoTableViewCell.xib; sourceTree = "<group>"; };
+		4B5D7E5C1B142C99007C2EE7 /* chuyendoi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chuyendoi@2x.png"; sourceTree = "<group>"; };
+		4B5D7E5E1B142DAC007C2EE7 /* chuyendoi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chuyendoi.png; sourceTree = "<group>"; };
+		4B5D7E601B142FE5007C2EE7 /* us@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "us@2x.png"; sourceTree = "<group>"; };
+		4B5D7E611B142FE5007C2EE7 /* vn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vn@2x.png"; sourceTree = "<group>"; };
+		4B5D7E641B14302F007C2EE7 /* us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = us.png; sourceTree = "<group>"; };
+		4B5D7E651B14302F007C2EE7 /* vn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -492,6 +524,7 @@
 		050B78FE1B0B8C260092DBB3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4B5D7E461B142806007C2EE7 /* ExchangeRate */,
 				055A52331B0C26AD00BD87F8 /* History */,
 				05D8F8C41B00BBEE00F70FC7 /* Transaction */,
 				05D8F8BA1B00ACE400F70FC7 /* Service */,
@@ -814,6 +847,7 @@
 		431E8E2E1AE9F9C600EA644C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4B5D7E5B1B142C8C007C2EE7 /* ExchangeRate */,
 				05CBD2DB1B0C7A05009E2459 /* History */,
 				05E3847B1B06C0A0006FF578 /* Transaction */,
 				430122A91AFCBFFD00180716 /* LeftMenu */,
@@ -1003,6 +1037,38 @@
 			path = "Library/NSString-MD5";
 			sourceTree = "<group>";
 		};
+		4B5D7E461B142806007C2EE7 /* ExchangeRate */ = {
+			isa = PBXGroup;
+			children = (
+				4B5D7E471B14287E007C2EE7 /* ExchangeRateViewController.h */,
+				4B5D7E481B14287E007C2EE7 /* ExchangeRateViewController.m */,
+				4B5D7E491B14287E007C2EE7 /* ExchangeRateViewController.xib */,
+				4B5D7E4C1B1428C1007C2EE7 /* ExchageRateTableViewCell.h */,
+				4B5D7E4D1B1428C1007C2EE7 /* ExchageRateTableViewCell.m */,
+				4B5D7E4E1B1428C1007C2EE7 /* ExchageRateTableViewCell.xib */,
+				4B5D7E511B1428F0007C2EE7 /* SectionOneTableViewCell.h */,
+				4B5D7E521B1428F0007C2EE7 /* SectionOneTableViewCell.m */,
+				4B5D7E531B1428F0007C2EE7 /* SectionOneTableViewCell.xib */,
+				4B5D7E561B142901007C2EE7 /* SectionTwoTableViewCell.h */,
+				4B5D7E571B142901007C2EE7 /* SectionTwoTableViewCell.m */,
+				4B5D7E581B142901007C2EE7 /* SectionTwoTableViewCell.xib */,
+			);
+			name = ExchangeRate;
+			sourceTree = "<group>";
+		};
+		4B5D7E5B1B142C8C007C2EE7 /* ExchangeRate */ = {
+			isa = PBXGroup;
+			children = (
+				4B5D7E641B14302F007C2EE7 /* us.png */,
+				4B5D7E651B14302F007C2EE7 /* vn.png */,
+				4B5D7E601B142FE5007C2EE7 /* us@2x.png */,
+				4B5D7E611B142FE5007C2EE7 /* vn@2x.png */,
+				4B5D7E5E1B142DAC007C2EE7 /* chuyendoi.png */,
+				4B5D7E5C1B142C99007C2EE7 /* chuyendoi@2x.png */,
+			);
+			name = ExchangeRate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1088,13 +1154,16 @@
 				05CBD2EF1B0C8CB8009E2459 /* ic_pass.png in Resources */,
 				05E94EDE1B0C097500316710 /* ic_menu_branch.png in Resources */,
 				05E94EE61B0C0C9200316710 /* ic_menu_rating.png in Resources */,
+				4B5D7E661B14302F007C2EE7 /* us.png in Resources */,
 				05E3847E1B06C0AF006FF578 /* uncheck.png in Resources */,
 				05E94EDF1B0C097500316710 /* ic_menu_help.png in Resources */,
+				4B5D7E5A1B142901007C2EE7 /* SectionTwoTableViewCell.xib in Resources */,
 				05E842781B0A2D0E00B196DD /* btn_approve.png in Resources */,
 				05E3847A1B06B633006FF578 /* bg_section.png in Resources */,
 				05E94EE01B0C097500316710 /* ic_menu_history.png in Resources */,
 				05E0DDC11B0CDE52008EDA06 /* back_menu.png in Resources */,
 				05F834BA1B0ACC7500594A73 /* TransactionResultHeaderView.xib in Resources */,
+				4B5D7E621B142FE5007C2EE7 /* us@2x.png in Resources */,
 				430BA5251AF8BC2E00CA7CFB /* IBChecker.sqlite in Resources */,
 				05E94EE21B0C097500316710 /* ic_menu_toge.png in Resources */,
 				431E8E4C1AE9FBB500EA644C /* AuthenHelp.html in Resources */,
@@ -1109,15 +1178,19 @@
 				05E94EE41B0C09A800316710 /* ic_menu_approve.png in Resources */,
 				431E8E721AE9FC3200EA644C /* RegisterViewController.xib in Resources */,
 				05E6DEE81B0AB8BA00399DAC /* TransactionResultCell.xib in Resources */,
+				4B5D7E631B142FE5007C2EE7 /* vn@2x.png in Resources */,
+				4B5D7E501B1428C1007C2EE7 /* ExchageRateTableViewCell.xib in Resources */,
 				431E8E3D1AE9FBA100EA644C /* bg_help_register.png in Resources */,
 				05F834C31B0B2F8B00594A73 /* login_btn_press.png in Resources */,
 				05CBD2E11B0C7A05009E2459 /* bg_segment_normal@2x.png in Resources */,
+				4B5D7E671B14302F007C2EE7 /* vn.png in Resources */,
 				431E8E6D1AE9FC3200EA644C /* AuthenViewController.xib in Resources */,
 				05F834CB1B0B346900594A73 /* LoginViewControlelr.xib in Resources */,
 				05CBD2ED1B0C8CB8009E2459 /* ic_fail.png in Resources */,
 				431E8EC41AEA03B000EA644C /* im_la_vn.png in Resources */,
 				05CBD2D51B0C70BB009E2459 /* HistoryViewController.xib in Resources */,
 				431E8E4D1AE9FBB500EA644C /* RegisterHelp.html in Resources */,
+				4B5D7E4B1B14287E007C2EE7 /* ExchangeRateViewController.xib in Resources */,
 				431E8E5E1AE9FC1C00EA644C /* LoginController.xib in Resources */,
 				05E3847F1B06C0AF006FF578 /* check.png in Resources */,
 				431E8E401AE9FBA100EA644C /* btn_dangnhap.png in Resources */,
@@ -1131,11 +1204,13 @@
 				431E8E5C1AE9FC1C00EA644C /* LoginAuthController.xib in Resources */,
 				05E842761B0A2B9D00B196DD /* bg_bar_check_code.png in Resources */,
 				430122AB1AFCC01800180716 /* ic_avata_leftmenu.png in Resources */,
+				4B5D7E551B1428F0007C2EE7 /* SectionOneTableViewCell.xib in Resources */,
 				05F834BD1B0AD19F00594A73 /* fail.png in Resources */,
 				05E6DEE01B0AB6B000399DAC /* TransactionResultViewController.xib in Resources */,
 				05DA0AEA1B075B990013365B /* HeaderSectionView.xib in Resources */,
 				05E3848D1B06ECE2006FF578 /* arrow_right.png in Resources */,
 				05CBD2E01B0C7A05009E2459 /* bg_segment_normal.png in Resources */,
+				4B5D7E5F1B142DAC007C2EE7 /* chuyendoi.png in Resources */,
 				05CBD2E81B0C8B94009E2459 /* cell_arrow_right.png in Resources */,
 				431E8E701AE9FC3200EA644C /* HelpViewController.xib in Resources */,
 				430122AD1AFCC3F500180716 /* ic_menu_lock.png in Resources */,
@@ -1155,6 +1230,7 @@
 				05E0DDC31B0CDE52008EDA06 /* back_menu@3x.png in Resources */,
 				05CBD2EE1B0C8CB8009E2459 /* ic_fail@2x.png in Resources */,
 				431E8E411AE9FBA100EA644C /* im_check.png in Resources */,
+				4B5D7E5D1B142C99007C2EE7 /* chuyendoi@2x.png in Resources */,
 				05CBD2F01B0C8CB8009E2459 /* ic_pass@2x.png in Resources */,
 				431E8E151AE9F85800EA644C /* Images.xcassets in Resources */,
 				05CBD2E21B0C7A05009E2459 /* bg_segment_selected.png in Resources */,
@@ -1175,10 +1251,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B5D7E591B142901007C2EE7 /* SectionTwoTableViewCell.m in Sources */,
 				050B78F61B0B8BC60092DBB3 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				055BB41D1B01D61200F66C65 /* User.m in Sources */,
 				431E8E9F1AE9FCE600EA644C /* AFSecurityPolicy.m in Sources */,
 				05D8F8C01B00BA9800F70FC7 /* BaseViewController.m in Sources */,
+				4B5D7E541B1428F0007C2EE7 /* SectionOneTableViewCell.m in Sources */,
 				431E8E9E1AE9FCE600EA644C /* AFNetworkReachabilityManager.m in Sources */,
 				050B78F91B0B8BC60092DBB3 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				431E8EB61AE9FD0F00EA644C /* Utils.m in Sources */,
@@ -1192,6 +1270,7 @@
 				05E384861B06CB3D006FF578 /* TransactionTableViewCell.m in Sources */,
 				430BA5381AF8D8C500CA7CFB /* MBProgressHUD.m in Sources */,
 				05CBD2E61B0C7FFA009E2459 /* TransactionListService.m in Sources */,
+				4B5D7E4F1B1428C1007C2EE7 /* ExchageRateTableViewCell.m in Sources */,
 				431E8EA71AE9FCE600EA644C /* UIAlertView+AFNetworking.m in Sources */,
 				431E8EA51AE9FCE600EA644C /* AFNetworkActivityIndicatorManager.m in Sources */,
 				431E8EA01AE9FCE600EA644C /* AFURLConnectionOperation.m in Sources */,
@@ -1228,6 +1307,7 @@
 				050B78FA1B0B8BC60092DBB3 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				05EDED591B0834FF00E85666 /* TransactionDetailService.m in Sources */,
 				055BB41A1B01D3D800F66C65 /* CoreData.xcdatamodeld in Sources */,
+				4B5D7E4A1B14287E007C2EE7 /* ExchangeRateViewController.m in Sources */,
 				05E6DEDF1B0AB6B000399DAC /* TransactionResultViewController.m in Sources */,
 				050B78F71B0B8BC60092DBB3 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				055BB4201B01E56900F66C65 /* PendingTransactionsService.m in Sources */,
