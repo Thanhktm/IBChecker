@@ -166,6 +166,11 @@
 		431E8EC41AEA03B000EA644C /* im_la_vn.png in Resources */ = {isa = PBXBuildFile; fileRef = 431E8EC21AEA03B000EA644C /* im_la_vn.png */; };
 		4381BB5C1B00BC7D00F32433 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4381BB5A1B00BC7D00F32433 /* NSString+MD5.m */; };
 		43B1D1991B04516D00C47ED8 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B1D1981B04516D00C47ED8 /* UserInfo.m */; };
+		4B5D7E3B1B13FF6C007C2EE7 /* SOSHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D7E391B13FF6C007C2EE7 /* SOSHelpViewController.m */; };
+		4B5D7E3C1B13FF6C007C2EE7 /* SOSHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E3A1B13FF6C007C2EE7 /* SOSHelpViewController.xib */; };
+		4B5D7E411B1409A3007C2EE7 /* dc.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E401B1409A3007C2EE7 /* dc.png */; };
+		4B5D7E431B140BAA007C2EE7 /* sos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E421B140BAA007C2EE7 /* sos@2x.png */; };
+		4B5D7E451B140C11007C2EE7 /* sos.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D7E441B140C11007C2EE7 /* sos.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -420,6 +425,12 @@
 		4381BB5A1B00BC7D00F32433 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		43B1D1971B04516D00C47ED8 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = "Constrant+Utils/UserInfo.h"; sourceTree = "<group>"; };
 		43B1D1981B04516D00C47ED8 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = "Constrant+Utils/UserInfo.m"; sourceTree = "<group>"; };
+		4B5D7E381B13FF6C007C2EE7 /* SOSHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSHelpViewController.h; sourceTree = "<group>"; };
+		4B5D7E391B13FF6C007C2EE7 /* SOSHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSHelpViewController.m; sourceTree = "<group>"; };
+		4B5D7E3A1B13FF6C007C2EE7 /* SOSHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SOSHelpViewController.xib; sourceTree = "<group>"; };
+		4B5D7E401B1409A3007C2EE7 /* dc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dc.png; sourceTree = "<group>"; };
+		4B5D7E421B140BAA007C2EE7 /* sos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sos@2x.png"; sourceTree = "<group>"; };
+		4B5D7E441B140C11007C2EE7 /* sos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sos.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -492,6 +503,7 @@
 		050B78FE1B0B8C260092DBB3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4B5D7E371B13FE4E007C2EE7 /* SOSHelp */,
 				055A52331B0C26AD00BD87F8 /* History */,
 				05D8F8C41B00BBEE00F70FC7 /* Transaction */,
 				05D8F8BA1B00ACE400F70FC7 /* Service */,
@@ -814,6 +826,7 @@
 		431E8E2E1AE9F9C600EA644C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4B5D7E3D1B140969007C2EE7 /* SOSHelp */,
 				05CBD2DB1B0C7A05009E2459 /* History */,
 				05E3847B1B06C0A0006FF578 /* Transaction */,
 				430122A91AFCBFFD00180716 /* LeftMenu */,
@@ -1003,6 +1016,26 @@
 			path = "Library/NSString-MD5";
 			sourceTree = "<group>";
 		};
+		4B5D7E371B13FE4E007C2EE7 /* SOSHelp */ = {
+			isa = PBXGroup;
+			children = (
+				4B5D7E381B13FF6C007C2EE7 /* SOSHelpViewController.h */,
+				4B5D7E391B13FF6C007C2EE7 /* SOSHelpViewController.m */,
+				4B5D7E3A1B13FF6C007C2EE7 /* SOSHelpViewController.xib */,
+			);
+			name = SOSHelp;
+			sourceTree = "<group>";
+		};
+		4B5D7E3D1B140969007C2EE7 /* SOSHelp */ = {
+			isa = PBXGroup;
+			children = (
+				4B5D7E441B140C11007C2EE7 /* sos.png */,
+				4B5D7E421B140BAA007C2EE7 /* sos@2x.png */,
+				4B5D7E401B1409A3007C2EE7 /* dc.png */,
+			);
+			name = SOSHelp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1093,6 +1126,7 @@
 				05E842781B0A2D0E00B196DD /* btn_approve.png in Resources */,
 				05E3847A1B06B633006FF578 /* bg_section.png in Resources */,
 				05E94EE01B0C097500316710 /* ic_menu_history.png in Resources */,
+				4B5D7E431B140BAA007C2EE7 /* sos@2x.png in Resources */,
 				05E0DDC11B0CDE52008EDA06 /* back_menu.png in Resources */,
 				05F834BA1B0ACC7500594A73 /* TransactionResultHeaderView.xib in Resources */,
 				430BA5251AF8BC2E00CA7CFB /* IBChecker.sqlite in Resources */,
@@ -1101,6 +1135,7 @@
 				431E8EB91AE9FDD800EA644C /* Default-568h@2x.png in Resources */,
 				431E8EBC1AE9FFE800EA644C /* Localizable.strings in Resources */,
 				050B78FC1B0B8BC60092DBB3 /* menu-button@2x.png in Resources */,
+				4B5D7E3C1B13FF6C007C2EE7 /* SOSHelpViewController.xib in Resources */,
 				431E8EC31AEA03B000EA644C /* im_la_en.png in Resources */,
 				05D8F8C91B00BC4500F70FC7 /* TransactionsViewController.xib in Resources */,
 				430122A81AFCBE4700180716 /* bg_leftmenu.png in Resources */,
@@ -1142,9 +1177,11 @@
 				431E8E3F1AE9FBA100EA644C /* btn_cancel.png in Resources */,
 				05DA0AE81B075A060013365B /* TransactionTableViewCell.xib in Resources */,
 				431E8E481AE9FBAC00EA644C /* bg_password.png in Resources */,
+				4B5D7E451B140C11007C2EE7 /* sos.png in Resources */,
 				431E8E421AE9FBA100EA644C /* im_uncheck.png in Resources */,
 				05E3848C1B06ECE2006FF578 /* arrow_down.png in Resources */,
 				05CBD2DA1B0C7127009E2459 /* HistoryTableViewCell.xib in Resources */,
+				4B5D7E411B1409A3007C2EE7 /* dc.png in Resources */,
 				055A52351B0C690400BD87F8 /* bg_navigation.png in Resources */,
 				05E384831B06C5B8006FF578 /* separate.png in Resources */,
 				431E8E501AE9FBBC00EA644C /* bg_wating.png in Resources */,
@@ -1243,6 +1280,7 @@
 				431E8EA91AE9FCE600EA644C /* UIImageView+AFNetworking.m in Sources */,
 				050B78FD1B0B8BC60092DBB3 /* SlideNavigationController.m in Sources */,
 				050B78F81B0B8BC60092DBB3 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
+				4B5D7E3B1B13FF6C007C2EE7 /* SOSHelpViewController.m in Sources */,
 				05D8F8C31B00BABE00F70FC7 /* BaseTableViewController.m in Sources */,
 				431E8E5D1AE9FC1C00EA644C /* LoginController.m in Sources */,
 				431E8E5B1AE9FC1C00EA644C /* LoginAuthController.m in Sources */,
